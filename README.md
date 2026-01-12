@@ -1,16 +1,58 @@
-# React + Vite
+# Paul Franccino | Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portafolio profesional de Desarrollo Android y Software Architecture, diseñado con un enfoque "Modern Tech" limpio y minimalista.
 
-Currently, two official plugins are available:
+![Portfolio Preview](src/assets/profile.jpg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Acerca del Proyecto
 
-## React Compiler
+Este sitio web es una presentación digital de mi carrera, proyectos y artículos técnicos. El diseño se centra en la legibilidad, la estética profesional y la identidad de marca personal.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Live Demo:** [Enlace a tu deploy (ej: paul-portfolio.vercel.app)]
 
-## Expanding the ESLint configuration
+### ✨ Características Principales
+*   **Diseño Modern Tech**: Paleta de colores minimalista (Blanco/Indigo/Gris) para una apariencia profesional y limpia.
+*   **Totalmente Responsive**: Se adapta perfectamente a móviles, tablets y escritorio.
+*   **100% en Español**: Contenido localizado y optimizado para SEO y coherencia linguística.
+*   **Integración Social**: Enlaces directos a LinkedIn, GitHub, Medium y Spotify.
+*   **Secciones Dinámicas**: Bio adaptativa, timelines de experiencia y grid de proyectos.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠t Tech Stack
+
+*   **Core**: [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
+*   **Estilos**: CSS Modules / Vanilla CSS (Variables CSS para theming)
+*   **Iconos**: [React Icons](https://react-icons.github.io/react-icons/)
+*   **Deployment**: Listo para Vercel / Netlify
+
+## 📦 Instalación y Uso
+
+Si quieres clonar y ejecutar este proyecto localmente:
+
+1.  **Clonar el repositorio**
+    ```bash
+    git clone https://github.com/pfranccino/portfolio.git
+    cd portfolio
+    ```
+
+2.  **Instalar dependencias**
+    ```bash
+    npm install
+    ```
+
+3.  **Correr servidor de desarrollo**
+    ```bash
+    npm run dev
+    ```
+    El sitio estará disponible en `http://localhost:5174`.
+
+4.  **Construir para producción**
+    ```bash
+    npm run build
+    ```
+
+## 📄 Licencia
+
+Este proyecto es para uso personal de portafolio.
+
+---
+Hecho con 💙 y código por [Paul Franccino](https://www.linkedin.com/in/paul-franccino-ayala/)
