@@ -1,0 +1,41 @@
+[
+    {
+        "id": "habit-tracker-backend",
+        "title": "Habit Tracker Backend",
+        "description": "API gamificada para seguimiento de hábitos (estilo Duolingo). Construida con FastAPI y Firebase, incluye sistemas de rachas y niveles de experiencia. Una exploración de backend moderno.",
+        "tags": [
+            "TypeScript",
+            "Python",
+            "FastAPI",
+            "#vibecoding"
+        ],
+        "link": "https://github.com/pfranccino/habit-tracker-backend",
+        "pinned": true
+    },
+    {
+        "id": "toml-deps-checker",
+        "title": "TOML Dependency Checker",
+        "description": "Herramienta de automatización para monitorear versiones de Gradle. Parsea `libs.versions.toml`, consulta repositorios Maven y genera reportes de estado. Ideal para mantener la higiene del proyecto.",
+        "tags": [
+            "Python",
+            "Bash",
+            "Gradle",
+            "Automation"
+        ],
+        "link": "https://github.com/pfranccino/toml-deps-checker",
+        "pinned": true
+    },
+    {
+        "id": "android-gradle-analyzer",
+        "title": "Android Gradle Analyzer",
+        "description": "Suite de visualización para dependencias en proyectos Android multi-módulo. Ayuda a entender y optimizar la complejidad del build en arquitecturas grandes.",
+        "tags": [
+            "Python",
+            "Android",
+            "Visualization",
+            "Tooling"
+        ],
+        "link": "https://github.com/pfranccino/android-gradle-analyzer",
+        "pinned": true
+    }
+]

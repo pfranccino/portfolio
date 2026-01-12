@@ -1,0 +1,88 @@
+{
+  "name": "Paul Franccino Ayala",
+  "role": "Ingeniero de Software | Desarrollador Android Senior",
+  "email": "paul.ayala023@gmail.com",
+  "phone": "+56923890855",
+  "location": "Santiago, Chile",
+  "greeting": "Hola, soy Paul Franccino Ayala 👋",
+  "bio": "Impulsado por la curiosidad de crear. Me apasiona el código, la arquitectura y el mundo mobile. Busco entender realmente qué es el software robusto y cómo construirlo. Siempre estoy explorando nuevas tecnologías, porque experimentar es la mejor forma de aprender. Hoy en el mundo Mobile, mañana... quién sabe.",
+  "current_focus": "Actualmente: Trabajando en MACH en la modernización de flujos de activación y recuperación de cuenta.",
+  "social": {
+    "github": "https://github.com/pfranccino",
+    "email": "mailto:paul.ayala023@gmail.com",
+    "spotify": "https://open.spotify.com/playlist/3OLbJ8Ws43vtOeSxXN7BtJ?si=myoF7zIQQUezmQjEWkluJA",
+    "medium": "https://pfranccino.medium.com/",
+    "linkedin": "https://www.linkedin.com/in/paul-franccino-ayala/"
+  },
+  "stats": [
+    {
+      "label": "Contribuciones",
+      "value": "+1.5k",
+      "desc": "En el último año (GitHub)"
+    },
+    {
+      "label": "Artículos",
+      "value": "3+",
+      "desc": "Sobre Arquitectura y Android"
+    },
+    {
+      "label": "Experiencia",
+      "value": "+5 Años",
+      "desc": "Desarrollo Android Nativo"
+    }
+  ],
+  "hobbies": [
+    {
+      "name": "Fanático de Lego",
+      "emoji": "🧱",
+      "desc": "Armar sets complejos de Lego es mi forma de meditación. La precisión y la estructura son claves, igual que en el código."
+    },
+    {
+      "name": "Fanático Parrillero",
+      "emoji": "🥩",
+      "desc": "Preparar los mejores asados para amigos y familia. La paciencia y el buen fuego hacen la diferencia."
+    },
+    {
+      "name": "Melómano",
+      "emoji": "🎧",
+      "desc": "Siempre programo con música. Echa un vistazo a mi playlist 'Mood' en Spotify."
+    }
+  ],
+  "skills": [
+    "Android",
+    "Kotlin",
+    "Java",
+    "Jetpack Compose",
+    "Git",
+    "JUnit5",
+    "Fastlane",
+    "CI/CD",
+    "MVI Architecture"
+  ],
+  "experience": [
+    {
+      "company": "MACH",
+      "role": "Desarrollador Android Senior",
+      "period": "2021-08 - Presente",
+      "description": "Desarrollo y mantenimiento de aplicacion financiera Android con mas de 1 millon de usuarios activos. Migración de Onboarding y Recuperación de Cuenta. Implementacion de arquitectura modular y patrones MVVM/MVI."
+    },
+    {
+      "company": "Trust Technologies",
+      "role": "Desarrollador Android",
+      "period": "2020-05 - 2021-07",
+      "description": "Desarrollo de SDKs de notificaciones y autenticación. Implementación de CI/CD con GitLab y Fastlane."
+    },
+    {
+      "company": "Jumpitt Labs",
+      "role": "Desarrollador Android",
+      "period": "2019-05 - 2020-04",
+      "description": "Biblioteca de testing de hardware y pruebas automatizadas para componentes críticos."
+    },
+    {
+      "company": "Zoo Company",
+      "role": "Practicante Desarrollador",
+      "period": "2018-12 - 2019-03",
+      "description": "Desarrollo de APIs RESTful con NodeJS y panel web con Angular."
+    }
+  ]
+}
