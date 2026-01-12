@@ -1,9 +1,5 @@
 # Paul Franccino | Portfolio
 
-Portafolio profesional de Desarrollo Android y Software Architecture, diseñado con un enfoque "Modern Tech" limpio y minimalista.
-
-![Portfolio Preview](src/assets/profile.jpg)
-
 ## 🚀 Acerca del Proyecto
 
 Este sitio web es una presentación digital de mi carrera, proyectos y artículos técnicos. El diseño se centra en la legibilidad, la estética profesional y la identidad de marca personal.
