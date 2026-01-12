@@ -4,22 +4,11 @@ import profileImage from '../assets/profile.jpg';
 
 const Hero = () => {
     return (
-        <section style={{
-            minHeight: '100vh',
-            display: 'flex',
-            alignItems: 'center',
-            paddingTop: '80px',
-            position: 'relative',
-            overflow: 'hidden'
-        }}>
-            <div className="container" style={{
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
-                gap: '4rem',
-                alignItems: 'center'
-            }}>
+
+        <section className="hero-section">
+            <div className="container hero-grid">
                 {/* Left Column: Text */}
-                <div className="animate-fade-in" style={{ zIndex: 2 }}>
+                <div className="animate-fade-in hero-content" style={{ zIndex: 2 }}>
                     <h1 style={{
                         fontSize: 'clamp(3.5rem, 6vw, 5.5rem)',
                         lineHeight: '1.1',
@@ -52,7 +41,7 @@ const Hero = () => {
                     </p>
 
                     {/* Social Icons */}
-                    <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+                    <div className="hero-socials" style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
                         <a href={profile.social.linkedin} target="_blank" rel="noopener noreferrer"
                             style={{ fontSize: '1.8rem', color: 'var(--text-secondary)' }}
                             onMouseEnter={(e) => e.currentTarget.style.color = '#0077B5'}

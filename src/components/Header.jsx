@@ -23,12 +23,12 @@ const Header = () => {
       backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.95)' : 'transparent',
       backdropFilter: scrolled ? 'blur(10px)' : 'none',
     }}>
-      <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <div className="container header-content" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <a href="#" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', color: 'var(--text-primary)' }}>
           Paul Franccino
         </a>
         <nav>
-          <ul style={{ display: 'flex', listStyle: 'none', gap: '2.5rem' }}>
+          <ul className="nav-list" style={{ display: 'flex', listStyle: 'none', gap: '2.5rem' }}>
             <li><a href="#about" style={{ fontSize: '1rem', fontWeight: '700', color: 'var(--text-primary)' }}>Sobre mí</a></li>
             <li><a href="#projects" style={{ fontSize: '1rem', fontWeight: '700', color: 'var(--text-primary)' }}>Proyectos</a></li>
             <li><a href="#experience" style={{ fontSize: '1rem', fontWeight: '700', color: 'var(--text-primary)' }}>Experiencia</a></li>
