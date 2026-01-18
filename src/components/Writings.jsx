@@ -24,14 +24,15 @@ const Writings = () => {
                                 href={article.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="card"
+                                className="card fade-in-up"
                                 style={{
                                     display: 'flex',
                                     flexDirection: 'column',
                                     textDecoration: 'none',
                                     minHeight: '320px',
                                     justifyContent: 'space-between',
-                                    padding: '2rem'
+                                    padding: '2rem',
+                                    animationDelay: `${index * 0.15}s`
                                 }}
                             >
                                 <div>

@@ -1,5 +1,11 @@
 [
     {
+        "title": "Vibecoding: Curiosidad, Control y el Miedo a Soltar el Teclado",
+        "description": "Explorando la intersección entre la intuición humana y la generación de código con IA.",
+        "link": "https://pfranccino.medium.com/vibecoding-curiosidad-control-y-el-miedo-a-soltar-el-teclado-9f30a27a10a2",
+        "date": "2026"
+    },
+    {
         "title": "Construyendo la tarjeta de crédito MACH: La Misión y el Barro",
         "description": "Parte 1 de la serie sobre los desafíos técnicos y de producto al implementar una tarjeta de crédito en una app masiva.",
         "link": "https://medium.com/@pfranccino/construyendo-la-tarjeta-de-cr%C3%A9dito-machbank-parte-1-la-misi%C3%B3n-y-el-barro-13699dc51d78",
