@@ -118,7 +118,8 @@ const Hero = () => {
                     }}>
                         <img
                             src={profileImage}
-                            alt="Paul Franccino"
+                            alt="Paul Franccino - Desarrollador Android Senior"
+                            loading="lazy"
                             style={{
                                 width: '100%',
                                 height: '100%',
