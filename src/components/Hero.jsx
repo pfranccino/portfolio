@@ -35,7 +35,6 @@ const Hero = () => {
           <a href="mailto:paul.ayala023@gmail.com" className="btn primary">
             Hablemos <span className="arrow">↗</span>
           </a>
-          <a href="#cv" className="btn ghost">Descargar CV</a>
         </div>
 
         <div className={styles.metaRow}>
