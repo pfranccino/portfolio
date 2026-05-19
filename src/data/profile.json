@@ -1,10 +1,9 @@
 {
   "name": "Paul Franccino Ayala",
-  "role": "Ingeniero de Software | Desarrollador Android Senior",
+  "role": "Desarrollador Android Senior",
   "email": "paul.ayala023@gmail.com",
   "phone": "+56923890855",
   "location": "Santiago, Chile",
-  "greeting": "Hola, soy Paul Franccino Ayala 👋",
   "bio": "Impulsado por la curiosidad de crear. Me apasiona el código, la arquitectura y el mundo mobile. Busco entender realmente qué es el software robusto y cómo construirlo. Siempre estoy explorando nuevas tecnologías, porque experimentar es la mejor forma de aprender. Hoy en el mundo Mobile, mañana... quién sabe.",
   "current_focus": "Actualmente: Trabajando en MACH en la modernización de flujos de activación y recuperación de cuenta.",
   "social": {
@@ -16,73 +15,63 @@
   },
   "stats": [
     {
-      "label": "Contribuciones",
-      "value": "+1.5k",
-      "desc": "En el último año (GitHub)"
+      "label": "Años Android",
+      "value": "+5"
     },
     {
-      "label": "Artículos",
-      "value": "3+",
-      "desc": "Sobre Arquitectura y Android"
+      "label": "Herramientas OSS",
+      "value": "3"
     },
     {
-      "label": "Experiencia",
-      "value": "+5 Años",
-      "desc": "Desarrollo Android Nativo"
+      "label": "Artículos publicados",
+      "value": "4"
     }
   ],
   "hobbies": [
     {
       "name": "Fanático de Lego",
-      "emoji": "🧱",
-      "desc": "Armar sets complejos de Lego es mi forma de meditación. La precisión y la estructura son claves, igual que en el código."
+      "title": "Precisión por placer.",
+      "desc": "Armar sets complejos de Lego es mi forma de meditación. La estructura y el ritmo de construir paso a paso son los mismos que en el código."
     },
     {
-      "name": "Fanático Parrillero",
-      "emoji": "🥩",
-      "desc": "Preparar los mejores asados para amigos y familia. La paciencia y el buen fuego hacen la diferencia."
+      "name": "Fanático parrillero",
+      "title": "Paciencia, fuego, gente.",
+      "desc": "Asados largos para amigos y familia. El asado bueno no es la carne — es esperar el momento justo del fuego, igual que en producción."
     },
     {
       "name": "Melómano",
-      "emoji": "🎧",
-      "desc": "Siempre programo con música. Echa un vistazo a mi playlist 'Mood' en Spotify."
+      "title": "Programo con música.",
+      "desc": "Siempre con audífonos. Tengo una playlist Mood en Spotify que comparto si la pides."
     }
-  ],
-  "skills": [
-    "Android",
-    "Kotlin",
-    "Java",
-    "Jetpack Compose",
-    "Git",
-    "JUnit5",
-    "Fastlane",
-    "CI/CD",
-    "MVI Architecture"
   ],
   "experience": [
     {
       "company": "MACH",
       "role": "Desarrollador Android Senior",
-      "period": "2021-08 - Presente",
-      "description": "Desarrollo y mantenimiento de aplicacion financiera Android con mas de 1 millon de usuarios activos. Migración de Onboarding y Recuperación de Cuenta. Implementacion de arquitectura modular y patrones MVVM/MVI."
+      "period": "2021 · 08 — hoy",
+      "current": true,
+      "description": "Desarrollo y mantenimiento de aplicación financiera Android con base de usuarios masiva. Migración de Onboarding y Recuperación de Cuenta. Implementación de arquitectura modular y patrones MVVM / MVI."
     },
     {
       "company": "Trust Technologies",
       "role": "Desarrollador Android",
-      "period": "2020-05 - 2021-07",
+      "period": "2020 · 05 — 2021 · 07",
+      "current": false,
       "description": "Desarrollo de SDKs de notificaciones y autenticación. Implementación de CI/CD con GitLab y Fastlane."
     },
     {
       "company": "Jumpitt Labs",
       "role": "Desarrollador Android",
-      "period": "2019-05 - 2020-04",
+      "period": "2019 · 05 — 2020 · 04",
+      "current": false,
       "description": "Biblioteca de testing de hardware y pruebas automatizadas para componentes críticos."
     },
     {
       "company": "Zoo Company",
       "role": "Practicante Desarrollador",
-      "period": "2018-12 - 2019-03",
-      "description": "Desarrollo de APIs RESTful con NodeJS y panel web con Angular."
+      "period": "2018 · 12 — 2019 · 03",
+      "current": false,
+      "description": "Desarrollo de APIs RESTful con Node.js y panel web con Angular."
     }
   ]
 }

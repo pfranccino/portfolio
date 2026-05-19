@@ -1,0 +1,134 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.work {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  transition: border-color .2s;
+}
+
+.work:hover {
+  border-color: var(--ink);
+}
+
+.text {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.kicker {
+  font-family: var(--font-m);
+  font-size: .72rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.title {
+  font-family: var(--font-h);
+  font-weight: 500;
+  font-size: 1.8rem;
+  letter-spacing: -.02em;
+  line-height: 1.1;
+}
+
+.desc {
+  color: var(--ink-2);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: .5rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-bottom: .5rem;
+}
+
+.tag {
+  font-family: var(--font-m);
+  font-size: .7rem;
+  padding: .25rem .55rem;
+  border-radius: 99px;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  color: var(--ink-2);
+}
+
+.link {
+  margin-top: auto;
+  font-family: var(--font-h);
+  font-weight: 600;
+  font-size: .92rem;
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+}
+
+.arr {
+  transition: transform .2s;
+}
+
+.work:hover .arr {
+  transform: translate(3px, -3px);
+}
+
+/* Terminal / code preview */
+.preview {
+  background: #0F172A;
+  color: #E2E8F0;
+  font-family: var(--font-m);
+  font-size: .78rem;
+  line-height: 1.7;
+  padding: 2rem 1.75rem;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+  position: relative;
+}
+
+.previewDots {
+  position: absolute;
+  top: .85rem;
+  left: 1rem;
+  width: .55rem;
+  height: .55rem;
+  border-radius: 50%;
+  background: #F43F5E;
+  box-shadow: 1rem 0 0 #FACC15, 2rem 0 0 #4ADE80;
+}
+
+.preview > *:first-child {
+  margin-top: 1rem;
+}
+
+.dim { color: #64748B; }
+.ok { color: #4ADE80; }
+.warn { color: #FACC15; }
+.err { color: #F87171; }
+.key { color: #A5B4FC; }
+.str { color: #FBCFE8; }
+.num { color: #FED7AA; }
+.com { color: #64748B; font-style: italic; }
+.cmd { color: #E2E8F0; }
+.plain { color: #E2E8F0; }
+
+@media (max-width: 880px) {
+  .work { grid-template-columns: 1fr; }
+  .text { padding: 2rem; }
+}

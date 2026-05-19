@@ -1,39 +1,34 @@
 import { useState, useEffect } from 'react';
+import styles from './Header.module.css';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   return (
-    <header style={{
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      right: 0,
-      padding: '1.5rem 0',
-      zIndex: 100,
-      transition: 'all 0.3s ease',
-      backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.95)' : 'transparent',
-      backdropFilter: scrolled ? 'blur(10px)' : 'none',
-    }}>
-      <div className="container header-content" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <a href="#" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', color: 'var(--text-primary)' }}>
-          Paul Franccino
-        </a>
-        <nav>
-          <ul className="nav-list" style={{ display: 'flex', listStyle: 'none', gap: '2.5rem' }}>
-            <li><a href="#about" style={{ fontSize: '1rem', fontWeight: '700', color: 'var(--text-primary)' }}>Sobre mí</a></li>
-            <li><a href="#projects" style={{ fontSize: '1rem', fontWeight: '700', color: 'var(--text-primary)' }}>Proyectos</a></li>
-            <li><a href="#experience" style={{ fontSize: '1rem', fontWeight: '700', color: 'var(--text-primary)' }}>Experiencia</a></li>
+    <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
+      <div className={`wrap ${styles.row}`}>
+        <a className={styles.brand} href="#hero">Paul Franccino</a>
+
+        <nav className={styles.nav} aria-label="Principal">
+          <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#stack">Stack</a></li>
+            <li><a href="#trabajo">Trabajo</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#articulos">Artículos</a></li>
           </ul>
         </nav>
+
+        <a href="mailto:paul.ayala023@gmail.com" className={styles.mail}>
+          paul.ayala023@gmail.com
+        </a>
       </div>
     </header>
   );

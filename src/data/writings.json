@@ -1,26 +1,30 @@
 [
-    {
-        "title": "Vibecoding: Curiosidad, Control y el Miedo a Soltar el Teclado",
-        "description": "Explorando la intersección entre la intuición humana y la generación de código con IA.",
-        "link": "https://pfranccino.medium.com/vibecoding-curiosidad-control-y-el-miedo-a-soltar-el-teclado-9f30a27a10a2",
-        "date": "2026"
-    },
-    {
-        "title": "Construyendo la tarjeta de crédito MACH: La Misión y el Barro",
-        "description": "Parte 1 de la serie sobre los desafíos técnicos y de producto al implementar una tarjeta de crédito en una app masiva.",
-        "link": "https://medium.com/@pfranccino/construyendo-la-tarjeta-de-cr%C3%A9dito-machbank-parte-1-la-misi%C3%B3n-y-el-barro-13699dc51d78",
-        "date": "2023"
-    },
-    {
-        "title": "Arquitectura Pura y el Mito del Lobo",
-        "description": "Parte 2: Cómo las decisiones de arquitectura impactan en la escalabilidad y el mantenimiento a largo plazo.",
-        "link": "https://medium.com/@pfranccino/construyendo-la-tarjeta-de-cr%C3%A9dito-machbank-parte-2-arquitectura-pura-y-el-mito-del-lobo-0ceb26bcde23",
-        "date": "2023"
-    },
-    {
-        "title": "La Guerra de los Píxeles y el Cambio de Mentalidad",
-        "description": "Parte 3: La importancia de la UI/UX y cómo la colaboración entre diseño y desarrollo es clave.",
-        "link": "https://medium.com/@pfranccino/construyendo-la-tarjeta-de-cr%C3%A9dito-machbank-parte-3-la-guerra-de-los-p%C3%ADxeles-y-el-cambio-de-e5c78708340d",
-        "date": "2023"
-    }
+  {
+    "title": "Vibecoding: Curiosidad, Control y el Miedo a Soltar el Teclado",
+    "excerpt": "La intersección entre la intuición humana y la generación de código con IA. Lo que estoy aprendiendo a entregar — y lo que aún me cuesta soltar.",
+    "link": "https://pfranccino.medium.com/vibecoding-curiosidad-control-y-el-miedo-a-soltar-el-teclado-9f30a27a10a2",
+    "year": "2026",
+    "category": "IA & código"
+  },
+  {
+    "title": "Construyendo la tarjeta de crédito: la misión y el barro",
+    "excerpt": "Cómo se empieza realmente un proyecto grande: los stakeholders, los compromisos imposibles, y por qué la parte técnica suele ser la menos difícil.",
+    "link": "https://medium.com/@pfranccino/construyendo-la-tarjeta-de-cr%C3%A9dito-machbank-parte-1-la-misi%C3%B3n-y-el-barro-13699dc51d78",
+    "year": "2023",
+    "category": "Parte 1 · MACH"
+  },
+  {
+    "title": "Arquitectura pura y el mito del lobo",
+    "excerpt": "Por qué las decisiones de arquitectura impactan más en mantenimiento que en velocidad inicial. Lo que defendí, lo que cedí, y lo que cambiaría hoy.",
+    "link": "https://medium.com/@pfranccino/construyendo-la-tarjeta-de-cr%C3%A9dito-machbank-parte-2-arquitectura-pura-y-el-mito-del-lobo-0ceb26bcde23",
+    "year": "2023",
+    "category": "Parte 2 · Arquitectura"
+  },
+  {
+    "title": "La guerra de los píxeles y el cambio de mentalidad",
+    "excerpt": "El día que entendí que UI/UX no era \"la otra disciplina\" sino parte del producto. La colaboración con diseño que terminó cambiando mi forma de escribir Compose.",
+    "link": "https://medium.com/@pfranccino/construyendo-la-tarjeta-de-cr%C3%A9dito-machbank-parte-3-la-guerra-de-los-p%C3%ADxeles-y-el-cambio-de-e5c78708340d",
+    "year": "2023",
+    "category": "Parte 3 · UI/UX"
+  }
 ]

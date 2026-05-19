@@ -28,8 +28,9 @@
   <meta property="og:description"
     content="Desarrollador Android Senior con +5 años de experiencia en Kotlin, Jetpack Compose y arquitectura MVI. Encuéntrame como @pfranccino en GitHub y Medium." />
   <meta property="og:image" content="https://pfranccino.dev/og-image.jpg" />
-  <meta property="og:image:width" content="839" />
-  <meta property="og:image:height" content="1024" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:alt" content="Paul Franccino - Desarrollador Android Senior" />
 
   <!-- Twitter Card -->
@@ -41,9 +42,13 @@
   <meta name="twitter:image" content="https://pfranccino.dev/og-image.jpg" />
   <meta name="twitter:creator" content="@pfranccino" />
 
-  <!-- Preconnect para Google Fonts -->
+  <!-- Preconnect + Google Fonts (moved from CSS @import for Web Vitals) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+
+  <!-- Preload hero photo for LCP -->
+  <link rel="preload" as="image" href="/profile-stamp.webp" fetchpriority="high" />
 
   <!-- JSON-LD: Person Schema -->
   <script type="application/ld+json">
@@ -71,6 +76,77 @@
     ],
     "knowsAbout": ["Android", "Kotlin", "Jetpack Compose", "MVI Architecture", "Java", "CI/CD", "Fastlane", "JUnit5"]
   }
+  </script>
+
+  <!-- JSON-LD: BlogPosting entries -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Vibecoding: Curiosidad, Control y el Miedo a Soltar el Teclado",
+      "author": { "@type": "Person", "name": "Paul Franccino Ayala" },
+      "datePublished": "2026-01-01",
+      "url": "https://pfranccino.medium.com/vibecoding-curiosidad-control-y-el-miedo-a-soltar-el-teclado-9f30a27a10a2"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Construyendo la tarjeta de crédito MACH: La Misión y el Barro",
+      "author": { "@type": "Person", "name": "Paul Franccino Ayala" },
+      "datePublished": "2023-01-01",
+      "url": "https://medium.com/@pfranccino/construyendo-la-tarjeta-de-cr%C3%A9dito-machbank-parte-1-la-misi%C3%B3n-y-el-barro-13699dc51d78"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Arquitectura Pura y el Mito del Lobo",
+      "author": { "@type": "Person", "name": "Paul Franccino Ayala" },
+      "datePublished": "2023-06-01",
+      "url": "https://medium.com/@pfranccino/construyendo-la-tarjeta-de-cr%C3%A9dito-machbank-parte-2-arquitectura-pura-y-el-mito-del-lobo-0ceb26bcde23"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "La Guerra de los Píxeles y el Cambio de Mentalidad",
+      "author": { "@type": "Person", "name": "Paul Franccino Ayala" },
+      "datePublished": "2023-09-01",
+      "url": "https://medium.com/@pfranccino/construyendo-la-tarjeta-de-cr%C3%A9dito-machbank-parte-3-la-guerra-de-los-p%C3%ADxeles-y-el-cambio-de-e5c78708340d"
+    }
+  ]
+  </script>
+
+  <!-- JSON-LD: SoftwareSourceCode entries -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareSourceCode",
+      "name": "toml-deps-checker",
+      "description": "Herramienta para monitorear versiones de Gradle. Parsea libs.versions.toml y entrega un reporte de estado.",
+      "programmingLanguage": "Python",
+      "codeRepository": "https://github.com/pfranccino/toml-deps-checker",
+      "author": { "@type": "Person", "name": "Paul Franccino Ayala" }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareSourceCode",
+      "name": "android-gradle-analyzer",
+      "description": "Suite de visualización para dependencias en proyectos Android multi-módulo.",
+      "programmingLanguage": "Python",
+      "codeRepository": "https://github.com/pfranccino/android-gradle-analyzer",
+      "author": { "@type": "Person", "name": "Paul Franccino Ayala" }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareSourceCode",
+      "name": "habit-tracker-backend",
+      "description": "API gamificada para tracking de hábitos con FastAPI y Firebase.",
+      "programmingLanguage": "Python",
+      "codeRepository": "https://github.com/pfranccino/habit-tracker-backend",
+      "author": { "@type": "Person", "name": "Paul Franccino Ayala" }
+    }
+  ]
   </script>
 </head>
 

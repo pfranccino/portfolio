@@ -1,0 +1,37 @@
+[
+  {
+    "category": "Lenguajes",
+    "items": [
+      { "name": "Kotlin", "note": "2019 — hoy" },
+      { "name": "Java", "note": "Legacy / interop" },
+      { "name": "Python", "note": "Tooling personal" }
+    ]
+  },
+  {
+    "category": "Mobile",
+    "items": [
+      { "name": "Android SDK" },
+      { "name": "Jetpack Compose" },
+      { "name": "Material 3" },
+      { "name": "Coroutines · Flow" }
+    ]
+  },
+  {
+    "category": "Arquitectura",
+    "items": [
+      { "name": "MVI" },
+      { "name": "MVVM", "note": "cuando aplica" },
+      { "name": "Modularización" },
+      { "name": "Clean Architecture" }
+    ]
+  },
+  {
+    "category": "Tooling & tests",
+    "items": [
+      { "name": "Gradle" },
+      { "name": "Fastlane · CI/CD" },
+      { "name": "JUnit5 · Mockk" },
+      { "name": "Git · GitHub Actions" }
+    ]
+  }
+]

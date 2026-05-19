@@ -1,15 +1,15 @@
+import styles from './Footer.module.css';
+
 const Footer = () => {
-    return (
-        <footer style={{
-            padding: '4rem 0',
-            borderTop: '1px solid var(--border-color)',
-            marginTop: '4rem'
-        }}>
-            <div className="container" style={{ textAlign: 'center', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                <p>&copy; {new Date().getFullYear()} Paul Franccino Ayala. All rights reserved.</p>
-            </div>
-        </footer>
-    );
+  return (
+    <footer className={styles.footer}>
+      <div className={`wrap ${styles.row}`}>
+        <span>© {new Date().getFullYear()} Paul Franccino Ayala</span>
+        <span>Santiago · Chile · CL</span>
+        <span>pfranccino.dev</span>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;

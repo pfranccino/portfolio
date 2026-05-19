@@ -1,0 +1,119 @@
+.contacto {
+  padding: 7rem 0 8rem 0;
+  background: var(--ink);
+  color: var(--bg);
+  border-top: 1px solid var(--ink);
+}
+
+.secNum {
+  font-family: var(--font-m);
+  font-size: .78rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #64748B;
+}
+
+.contacto :global(.sec-head) {
+  margin-bottom: 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.heading {
+  font-family: var(--font-h);
+  font-weight: 400;
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: .95;
+  letter-spacing: -.03em;
+  margin-bottom: 1.5rem;
+  color: var(--bg);
+}
+
+.heading em {
+  font-style: italic;
+  color: #CBD5E1;
+}
+
+.lead {
+  font-family: var(--font-b);
+  font-size: 1.1rem;
+  color: #CBD5E1;
+  max-width: 48ch;
+  margin-bottom: 2rem;
+  line-height: 1.55;
+}
+
+.mailPill {
+  display: inline-flex;
+  align-items: center;
+  gap: .7rem;
+  font-family: var(--font-h);
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: var(--bg);
+  padding: 1rem 1.5rem;
+  border: 1px solid #334155;
+  border-radius: 99px;
+  transition: background .2s, border-color .2s, color .2s;
+}
+
+.mailPill:hover {
+  background: var(--bg);
+  color: var(--ink);
+  border-color: var(--bg);
+}
+
+.channels {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #334155;
+}
+
+.channel {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1.25rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid #334155;
+  align-items: center;
+  transition: opacity .2s;
+}
+
+.channel:hover {
+  opacity: .8;
+}
+
+.chLabel {
+  font-family: var(--font-m);
+  font-size: .74rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #64748B;
+}
+
+.chHandle {
+  font-family: var(--font-h);
+  font-weight: 500;
+  color: var(--bg);
+}
+
+.chExt {
+  font-family: var(--font-m);
+  font-size: .74rem;
+  color: #94A3B8;
+  transition: color .2s;
+}
+
+.channel:hover .chExt {
+  color: var(--bg);
+}
+
+@media (max-width: 880px) {
+  .grid { grid-template-columns: 1fr; gap: 3rem; }
+  .contacto { padding: 5rem 0 6rem 0; }
+}

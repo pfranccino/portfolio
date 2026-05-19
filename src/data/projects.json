@@ -1,41 +1,75 @@
 [
-    {
-        "id": "habit-tracker-backend",
-        "title": "Habit Tracker Backend",
-        "description": "API gamificada para seguimiento de hábitos (estilo Duolingo). Construida con FastAPI y Firebase, incluye sistemas de rachas y niveles de experiencia. Una exploración de backend moderno.",
-        "tags": [
-            "TypeScript",
-            "Python",
-            "FastAPI",
-            "#vibecoding"
-        ],
-        "link": "https://github.com/pfranccino/habit-tracker-backend",
-        "pinned": true
-    },
-    {
-        "id": "toml-deps-checker",
-        "title": "TOML Dependency Checker",
-        "description": "Herramienta de automatización para monitorear versiones de Gradle. Parsea `libs.versions.toml`, consulta repositorios Maven y genera reportes de estado. Ideal para mantener la higiene del proyecto.",
-        "tags": [
-            "Python",
-            "Bash",
-            "Gradle",
-            "Automation"
-        ],
-        "link": "https://github.com/pfranccino/toml-deps-checker",
-        "pinned": true
-    },
-    {
-        "id": "android-gradle-analyzer",
-        "title": "Android Gradle Analyzer",
-        "description": "Suite de visualización para dependencias en proyectos Android multi-módulo. Ayuda a entender y optimizar la complejidad del build en arquitecturas grandes.",
-        "tags": [
-            "Python",
-            "Android",
-            "Visualization",
-            "Tooling"
-        ],
-        "link": "https://github.com/pfranccino/android-gradle-analyzer",
-        "pinned": true
+  {
+    "id": "toml-deps-checker",
+    "title": "toml-deps-checker",
+    "kicker": "Python · CLI · Gradle",
+    "description": "Herramienta para monitorear versiones de Gradle. Parsea libs.versions.toml, consulta repositorios Maven y entrega un reporte con qué está al día, qué tiene minor pendiente y qué tiene major bloqueante.",
+    "tags": ["Python", "Bash", "Gradle", "Automation"],
+    "link": "https://github.com/pfranccino/toml-deps-checker",
+    "preview": {
+      "type": "terminal",
+      "lines": [
+        { "type": "cmd", "text": "$ toml-check libs.versions.toml" },
+        { "type": "blank" },
+        { "type": "ok", "text": "✓ kotlin             1.9.22   → up-to-date" },
+        { "type": "ok", "text": "✓ hilt               2.51     → up-to-date" },
+        { "type": "warn", "text": "⚠ retrofit           2.9.0    → 2.11.0  (minor)" },
+        { "type": "err", "text": "✗ compose-bom        2024.02  → 2024.06 (major)" },
+        { "type": "ok", "text": "✓ coroutines         1.8.0    → up-to-date" },
+        { "type": "blank" },
+        { "type": "dim", "text": "5 deps · 1 minor · 1 major · 3 ok" },
+        { "type": "dim", "text": "report → ./build/deps-report.md" }
+      ]
     }
+  },
+  {
+    "id": "android-gradle-analyzer",
+    "title": "android-gradle-analyzer",
+    "kicker": "Python · Visualization · Android",
+    "description": "Suite de visualización para dependencias en proyectos Android multi-módulo. Ayuda a entender la complejidad del build, encontrar cuellos de botella en el grafo, y decidir dónde modularizar.",
+    "tags": ["Python", "Android", "Visualization", "Tooling"],
+    "link": "https://github.com/pfranccino/android-gradle-analyzer",
+    "preview": {
+      "type": "terminal",
+      "lines": [
+        { "type": "cmd", "text": "$ analyze ./my-app --output html" },
+        { "type": "blank" },
+        { "type": "key", "text": "Modules          47" },
+        { "type": "key", "text": "Dependencies     312" },
+        { "type": "key", "text": "Avg fan-in       6.4" },
+        { "type": "key", "text": "Max depth        9" },
+        { "type": "blank" },
+        { "type": "warn", "text": "⚠ bottlenecks" },
+        { "type": "dim", "text": "  core-network     in: 28" },
+        { "type": "dim", "text": "  core-database    in: 22" },
+        { "type": "blank" },
+        { "type": "ok", "text": "→ ./build/deps-graph.html" }
+      ]
+    }
+  },
+  {
+    "id": "habit-tracker-backend",
+    "title": "habit-tracker-backend",
+    "kicker": "FastAPI · Firebase · Backend",
+    "description": "API gamificada para tracking de hábitos. Sistema de rachas, niveles de XP y notificaciones. Una exploración de backend moderno con FastAPI y Firebase como pareja simple para shipear rápido.",
+    "tags": ["TypeScript", "Python", "FastAPI", "#vibecoding"],
+    "link": "https://github.com/pfranccino/habit-tracker-backend",
+    "preview": {
+      "type": "code",
+      "lines": [
+        { "type": "com", "text": "# app/api/habits.py" },
+        { "type": "blank" },
+        { "type": "key", "text": "@router.post(\"/habits/{id}/check-in\")" },
+        { "type": "plain", "text": "async def check_in(" },
+        { "type": "plain", "text": "  id: str," },
+        { "type": "plain", "text": "  user: User = Depends(get_user)," },
+        { "type": "plain", "text": "):" },
+        { "type": "plain", "text": "  streak = await service.increment(user.id, id)" },
+        { "type": "plain", "text": "  return CheckInResponse(" },
+        { "type": "plain", "text": "    streak_days=streak.current," },
+        { "type": "plain", "text": "    xp_gained=streak.xp_award," },
+        { "type": "plain", "text": "  )" }
+      ]
+    }
+  }
 ]

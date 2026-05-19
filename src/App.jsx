@@ -1,9 +1,11 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
-import About from './components/About';
-import Projects from './components/Projects';
+import Sobre from './components/Sobre';
+import Stack from './components/Stack';
+import Trabajo from './components/Trabajo';
 import Experience from './components/Experience';
-import Writings from './components/Writings';
+import Articulos from './components/Articulos';
+import Contacto from './components/Contacto';
 import Footer from './components/Footer';
 
 function App() {
@@ -12,10 +14,12 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <About />
-        <Projects />
+        <Sobre />
+        <Stack />
+        <Trabajo />
         <Experience />
-        <Writings />
+        <Articulos />
+        <Contacto />
       </main>
       <Footer />
     </>
