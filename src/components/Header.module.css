@@ -22,6 +22,7 @@
   gap: 2rem;
 }
 
+/* ── Brand ── */
 .brand {
   font-family: var(--font-h);
   font-weight: 600;
@@ -31,6 +32,7 @@
   align-items: center;
   gap: .65rem;
   color: var(--ink);
+  flex-shrink: 0;
 }
 
 .brand::before {
@@ -43,6 +45,7 @@
   flex-shrink: 0;
 }
 
+/* ── Desktop nav ── */
 .nav ul {
   list-style: none;
   display: flex;
@@ -61,23 +64,112 @@
   color: var(--ink);
 }
 
+/* ── Email ── */
 .mail {
   font-family: var(--font-m);
   font-size: .78rem;
   color: var(--ink-2);
   transition: color .2s;
+  flex-shrink: 0;
 }
 
 .mail:hover {
   color: var(--ink);
 }
 
+/* ── Hamburger button ── */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 2rem;
+  height: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.burger span {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: transform .25s ease, opacity .25s ease;
+  transform-origin: center;
+}
+
+/* X state */
+.burgerOpen span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.burgerOpen span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.burgerOpen span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* ── Mobile drawer ── */
+.drawer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg);
+  padding: 6rem 2.5rem 3rem;
+  flex-direction: column;
+  gap: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+  z-index: 40;
+}
+
+.drawerOpen {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.drawer nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.drawer nav a {
+  font-family: var(--font-h);
+  font-weight: 500;
+  font-size: 2rem;
+  letter-spacing: -.02em;
+  color: var(--ink);
+  display: block;
+  padding: .5rem 0;
+  border-bottom: 1px solid var(--rule);
+  transition: color .2s, padding-left .2s;
+}
+
+.drawer nav a:hover {
+  color: var(--accent);
+  padding-left: .5rem;
+}
+
+.drawerMail {
+  font-family: var(--font-m);
+  font-size: .82rem;
+  color: var(--ink-2);
+  margin-top: auto;
+}
+
+/* ── Responsive ── */
 @media (max-width: 760px) {
   .header { padding: 1rem 0; }
   .nav { display: none; }
-  /* TODO: hamburger menu follow-up */
+  .mail { display: none; }
+  .burger { display: flex; }
+  .drawer { display: flex; }
 }
 
 @media (max-width: 520px) {
-  .mail { display: none; }
+  .drawer { padding: 5rem 1.25rem 2rem; }
 }
