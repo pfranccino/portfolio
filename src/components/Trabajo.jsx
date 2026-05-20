@@ -3,15 +3,21 @@ import styles from './Trabajo.module.css';
 
 const Preview = ({ preview }) => (
   <div className={styles.preview} aria-hidden="true">
-    <div className={styles.previewDots} />
-    {preview.lines.map((line, i) => {
-      if (line.type === 'blank') return <div key={i}>&nbsp;</div>;
-      return (
-        <div key={i} className={styles[line.type] || ''}>
-          {line.text}
-        </div>
-      );
-    })}
+    <div className={styles.previewBar}>
+      <span className={styles.dotRed} />
+      <span className={styles.dotYellow} />
+      <span className={styles.dotGreen} />
+    </div>
+    <div className={styles.previewCode}>
+      {preview.lines.map((line, i) => {
+        if (line.type === 'blank') return <div key={i}>&nbsp;</div>;
+        return (
+          <div key={i} className={styles[line.type] || ''}>
+            {line.text}
+          </div>
+        );
+      })}
+    </div>
   </div>
 );
 
