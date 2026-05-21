@@ -125,11 +125,29 @@
 
     .url {
       position: absolute;
-      bottom: 52px;
+      bottom: 48px;
       right: 90px;
       z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .cta {
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #F1F5F9;
+      background: #4F46E5;
+      padding: 8px 18px;
+      border-radius: 99px;
+      letter-spacing: -.01em;
+    }
+
+    .domain {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 15px;
+      font-size: 13px;
       color: #334155;
       letter-spacing: .06em;
     }
@@ -168,6 +186,9 @@
     </div>
   </div>
 
-  <div class="url">pfranccino.dev</div>
+  <div class="url">
+    <div class="cta">Ver portfolio ↗</div>
+    <div class="domain">pfranccino.dev</div>
+  </div>
 </body>
 </html>
