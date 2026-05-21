@@ -9,7 +9,7 @@ const outPath  = path.resolve(__dirname, '../public/og-image.jpg');
 const browser = await puppeteer.launch({ headless: 'new' });
 const page    = await browser.newPage();
 
-await page.setViewport({ width: 1200, height: 630, deviceScaleFactor: 2 });
+await page.setViewport({ width: 1200, height: 630, deviceScaleFactor: 1 });
 await page.goto(`file://${htmlPath}`, { waitUntil: 'networkidle0' });
 
 // Wait for Google Fonts
