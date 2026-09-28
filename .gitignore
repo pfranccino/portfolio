@@ -121,3 +121,6 @@ dist/
 # Local artifacts
 .gemini/
 .agent/
+
+# Claude Code local state
+.claude/
