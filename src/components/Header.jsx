@@ -10,15 +10,32 @@ const NAV_LINKS = [
   { href: '#articulos', label: 'Artículos' },
 ];
 
+const SECTION_IDS = NAV_LINKS.map(l => l.href.slice(1));
+
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeId, setActiveId] = useState('');
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
+    const els = SECTION_IDS.map(id => document.getElementById(id)).filter(Boolean);
+    if (!els.length) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter(e => e.isIntersecting);
+        if (visible.length) setActiveId(visible[0].target.id);
+      },
+      { rootMargin: '-30% 0px -60% 0px' }
+    );
+    els.forEach(el => observer.observe(el));
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -68,7 +85,11 @@ const Header = () => {
           <nav className={styles.nav} aria-label="Principal">
             <ul>
               {NAV_LINKS.map(({ href, label }) => (
-                <li key={href}><a href={href}>{label}</a></li>
+                <li key={href}>
+                  <a href={href} className={activeId === href.slice(1) ? styles.active : ''}>
+                    {label}
+                  </a>
+                </li>
               ))}
             </ul>
           </nav>
