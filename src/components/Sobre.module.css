@@ -70,7 +70,7 @@
 
 .hobby {
   border: 1px solid var(--rule);
-  background: #fff;
+  background: var(--surface);
   border-radius: 6px;
   padding: 1.75rem;
   display: flex;

@@ -10,7 +10,7 @@
   border: 1px solid var(--rule);
   border-radius: 8px;
   overflow: hidden;
-  background: #fff;
+  background: var(--surface);
   transition: border-color .2s;
 }
 
@@ -89,8 +89,8 @@
 
 /* Terminal / code preview */
 .preview {
-  background: #0F172A;
-  color: #E2E8F0;
+  background: var(--inv-bg);
+  color: var(--inv-ink);
   font-family: var(--font-m);
   font-size: .78rem;
   line-height: 1.7;
@@ -104,7 +104,7 @@
   align-items: center;
   gap: .45rem;
   padding: .75rem 1rem;
-  border-bottom: 1px solid #1E293B;
+  border-bottom: 1px solid var(--inv-rule);
   flex-shrink: 0;
 }
 
@@ -130,16 +130,16 @@
   overflow-x: auto;
 }
 
-.dim { color: #64748B; }
+.dim { color: var(--inv-ink-3); }
 .ok { color: #4ADE80; }
 .warn { color: #FACC15; }
 .err { color: #F87171; }
 .key { color: #A5B4FC; }
 .str { color: #FBCFE8; }
 .num { color: #FED7AA; }
-.com { color: #64748B; font-style: italic; }
-.cmd { color: #E2E8F0; }
-.plain { color: #E2E8F0; }
+.com { color: var(--inv-ink-3); font-style: italic; }
+.cmd { color: var(--inv-ink); }
+.plain { color: var(--inv-ink); }
 
 @media (max-width: 880px) {
   .work { grid-template-columns: 1fr; }

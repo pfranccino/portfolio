@@ -4,6 +4,7 @@
   /* — Core palette — */
   --bg: #F8FAFC;
   --bg-2: #EEF2F7;
+  --surface: #FFFFFF;
   --ink: #0F172A;
   --ink-2: #475569;
   --ink-3: #94A3B8;
@@ -12,6 +13,13 @@
   --accent: #4F46E5;
   --accent-soft: #EEF0FF;
   --ok: oklch(0.55 0.14 150);
+
+  /* — Inverted section (Contacto / Footer) — */
+  --inv-bg: #0F172A;
+  --inv-ink: #F8FAFC;
+  --inv-ink-2: #CBD5E1;
+  --inv-ink-3: #64748B;
+  --inv-rule: #334155;
 
   /* — Typography — */
   --font-h: 'Outfit', sans-serif;
@@ -23,7 +31,48 @@
   --spacing-md: 1rem;
   --spacing-lg: 2rem;
   --spacing-xl: 6rem;
+}
 
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F1219;
+    --bg-2: #181D27;
+    --surface: #1A2030;
+    --ink: #E2E8F0;
+    --ink-2: #94A3B8;
+    --ink-3: #64748B;
+    --rule: #2A3040;
+    --rule-soft: #1E2535;
+    --accent: #818CF8;
+    --accent-soft: #1E1B4B;
+    --ok: oklch(0.65 0.16 150);
+    --inv-bg: #080B10;
+    --inv-ink: #E2E8F0;
+    --inv-ink-2: #94A3B8;
+    --inv-ink-3: #475569;
+    --inv-rule: #1E2535;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #0F1219;
+  --bg-2: #181D27;
+  --surface: #1A2030;
+  --ink: #E2E8F0;
+  --ink-2: #94A3B8;
+  --ink-3: #64748B;
+  --rule: #2A3040;
+  --rule-soft: #1E2535;
+  --accent: #818CF8;
+  --accent-soft: #1E1B4B;
+  --ok: oklch(0.65 0.16 150);
+  --inv-bg: #080B10;
+  --inv-ink: #E2E8F0;
+  --inv-ink-2: #94A3B8;
+  --inv-ink-3: #475569;
+  --inv-rule: #1E2535;
+  color-scheme: dark;
 }
 
 * {
@@ -160,7 +209,7 @@ a {
   border-radius: 99px;
   border: 1px solid var(--rule);
   color: var(--ink-2);
-  background: #fff;
+  background: var(--surface);
   letter-spacing: .01em;
 }
 
