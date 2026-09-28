@@ -24,17 +24,6 @@
   --spacing-lg: 2rem;
   --spacing-xl: 6rem;
 
-  /* — Aliases for backwards compatibility — */
-  --bg-color: var(--bg);
-  --text-primary: var(--ink);
-  --text-secondary: var(--ink-2);
-  --accent-color: var(--accent);
-  --border-color: var(--rule);
-  --font-heading: var(--font-h);
-  --font-body: var(--font-b);
-  --card-bg: #fff;
-  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-medium: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
