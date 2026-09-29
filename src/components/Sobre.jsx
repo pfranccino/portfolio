@@ -1,4 +1,3 @@
-import profileImage from '../assets/profile.jpg';
 import profile from '../data/profile.json';
 import styles from './Sobre.module.css';
 
@@ -34,7 +33,9 @@ const Sobre = () => {
           <div className={styles.photo}>
             <div className={styles.frame}>
               <img
-                src={profileImage}
+                src="/img/profile.webp"
+                srcSet="/img/profile-sm.webp 420w, /img/profile.webp 840w"
+                sizes="(max-width: 880px) 100vw, 420px"
                 alt="Paul Franccino Ayala"
                 loading="lazy"
               />

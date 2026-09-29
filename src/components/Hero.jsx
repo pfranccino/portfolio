@@ -1,4 +1,3 @@
-import profileImage from '../assets/profile.jpg';
 import styles from './Hero.module.css';
 
 const Hero = () => {
@@ -56,7 +55,8 @@ const Hero = () => {
           <div className={styles.signature}>
             <div className={styles.stamp}>
               <img
-                src={profileImage}
+                src="/img/profile-stamp.webp"
+                srcSet="/img/profile-stamp.webp 1x, /img/profile-stamp-2x.webp 2x"
                 alt="Paul Franccino — Desarrollador Android Senior"
                 width={120}
                 height={150}
