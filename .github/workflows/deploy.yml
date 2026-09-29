@@ -25,6 +25,12 @@ jobs:
       - run: npm run lint
       - run: npm run build
 
+      - name: Lighthouse audit
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          uploadArtifacts: true
+          configPath: .github/lighthouse/lighthouserc.json
+
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
