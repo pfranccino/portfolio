@@ -18,15 +18,17 @@ const Sobre = () => {
         <div className={styles.grid}>
           <div className={styles.bio}>
             <p className={styles.bioFirst}>
-              Impulsado por la curiosidad de crear. Me apasiona el código, la arquitectura y el mundo mobile.
+              Hago apps Android desde 2019. Hoy, en MACH, migro los flujos de onboarding
+              y recuperación de cuenta de una app financiera.
             </p>
             <p>
-              Busco entender realmente <em>qué</em> es el software robusto y cómo construirlo.
-              Siempre estoy explorando nuevas tecnologías, porque experimentar es la mejor forma de aprender.
+              Antes armé SDKs de notificaciones y autenticación en Trust Technologies, y una
+              biblioteca de pruebas de hardware en Jumpitt Labs. Lo que más me engancha es la
+              arquitectura: cómo partir una app en módulos para que siga siendo fácil de cambiar.
             </p>
             <p>
-              Hoy estoy en el mundo Android nativo, en fintech. Mañana… quién sabe.
-              Lo que sí sé es que voy a estar leyendo, escribiendo y construyendo algo.
+              Cuando algo me estorba en el día a día, escribo una herramienta en Python para
+              resolverlo. Cuando un proyecto me enseña algo, lo cuento en Medium. Mañana… quién sabe.
             </p>
           </div>
 
@@ -50,10 +52,7 @@ const Sobre = () => {
         <div className={styles.hobbies}>
           {profile.hobbies.map((hobby, i) => (
             <div key={i} className={styles.hobby}>
-              <div className={styles.hobbyLabel}>
-                <span className={styles.dot} />
-                {hobby.name}
-              </div>
+              <div className={styles.hobbyLabel}>{hobby.name}</div>
               <h4 className={styles.hobbyTitle}>{hobby.title}</h4>
               <p className={styles.hobbyDesc}>{hobby.desc}</p>
               {hobby.name === 'Melómano' && (
@@ -64,7 +63,7 @@ const Sobre = () => {
                   rel="noreferrer"
                   aria-label="Escuchar el Mood Mix de Paul Franccino en Spotify"
                 >
-                  Escuchar el mix →
+                  Escuchar en Spotify <span aria-hidden="true">↗</span>
                 </a>
               )}
             </div>

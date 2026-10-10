@@ -10,42 +10,42 @@ const Articulos = () => {
           <div className="sec-num">05 / Artículos</div>
           <div>
             <h2 className="sec-title">
-              Lo que escribo<br /><span className="muted">desde el barro.</span>
+              Escribo<br /><span className="muted">desde el barro.</span>
             </h2>
             <p className="sec-lede">
-              Experiencias, opiniones y aprendizajes desde adentro de los proyectos.
-              No manuales — historias de lo que viví.
+              Cuento lo que viví adentro de cada proyecto y lo que aprendí ahí.
+              Para manuales ya está la documentación.
             </p>
           </div>
         </div>
 
         <div className={styles.grid}>
-          {writings.map((article, i) => (
+          {writings.map((article) => (
             <a
-              key={i}
+              key={article.link}
               className={styles.card}
               href={article.link}
               target="_blank"
               rel="noreferrer"
-              aria-label={`Leer "${article.title}" en Medium`}
+              aria-label={`Leer "${article.title}" en Medium (se abre en otra pestaña)`}
             >
               <div className={styles.date}>
                 <span>{article.year}</span>
                 <span className={styles.badge}>{article.category}</span>
               </div>
-              <h4 className={styles.title}>{article.title}</h4>
+              <h3 className={styles.title}>{article.title}</h3>
               <p className={styles.excerpt}>{article.excerpt}</p>
               <span className={styles.read}>
-                Leer en Medium <span className={styles.arr}>↗</span>
+                Leer en Medium <span className={styles.arr} aria-hidden="true">↗</span>
               </span>
             </a>
           ))}
         </div>
 
         <div className={styles.moreLine}>
-          <p>Sigo publicando — si te interesa el tema sígueme en Medium.</p>
+          <p>Estos son 4 de los 6 que llevo publicados.</p>
           <a href={profile.social.medium} target="_blank" rel="noreferrer">
-            Ver todo en Medium →
+            Ver todos en Medium <span aria-hidden="true">↗</span>
           </a>
         </div>
       </div>

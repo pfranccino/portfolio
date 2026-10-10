@@ -3,72 +3,42 @@
     "id": "toml-deps-checker",
     "title": "toml-deps-checker",
     "kicker": "Python · CLI · Gradle",
-    "description": "Herramienta para monitorear versiones de Gradle. Parsea libs.versions.toml, consulta repositorios Maven y entrega un reporte con qué está al día, qué tiene minor pendiente y qué tiene major bloqueante.",
-    "tags": ["Python", "Bash", "Gradle", "Automation"],
+    "description": "Revisa las versiones de un proyecto Gradle. Lee libs.versions.toml, consulta los repositorios Maven y marca cada dependencia en verde, amarillo o rojo según cuánto se atrasó. El informe completo queda en dependency_status.json.",
+    "tags": ["Python", "Bash", "Gradle", "CI"],
     "link": "https://github.com/pfranccino/toml-deps-checker",
     "preview": {
-      "type": "terminal",
+      "source": "Salida de ejemplo del README",
       "lines": [
-        { "type": "cmd", "text": "$ toml-check libs.versions.toml" },
-        { "type": "blank" },
-        { "type": "ok", "text": "✓ kotlin             1.9.22   → up-to-date" },
-        { "type": "ok", "text": "✓ hilt               2.51     → up-to-date" },
-        { "type": "warn", "text": "⚠ retrofit           2.9.0    → 2.11.0  (minor)" },
-        { "type": "err", "text": "✗ compose-bom        2024.02  → 2024.06 (major)" },
-        { "type": "ok", "text": "✓ coroutines         1.8.0    → up-to-date" },
-        { "type": "blank" },
-        { "type": "dim", "text": "5 deps · 1 minor · 1 major · 3 ok" },
-        { "type": "dim", "text": "report → ./build/deps-report.md" }
+        { "type": "cmd", "text": "$ toml-deps-checker --calver-months 2" },
+        { "type": "err", "text": "🔴 androidx.compose:compose-bom      2026.04.01  2026.08.00" },
+        { "type": "warn", "text": "🟡 com.google.firebase:firebase-bom  34.10.0     34.18.0" },
+        { "type": "warn", "text": "🟡 com.squareup.okhttp3:okhttp       5.4.0       5.5.0" }
       ]
     }
   },
   {
     "id": "android-gradle-analyzer",
     "title": "android-gradle-analyzer",
-    "kicker": "Python · Visualization · Android",
-    "description": "Suite de visualización para dependencias en proyectos Android multi-módulo. Ayuda a entender la complejidad del build, encontrar cuellos de botella en el grafo, y decidir dónde modularizar.",
-    "tags": ["Python", "Android", "Visualization", "Tooling"],
+    "kicker": "Python · CLI · Android",
+    "description": "Lee los build.gradle de un proyecto Android multi-módulo y muestra cómo dependen los módulos entre sí. Genera diagramas Mermaid y PlantUML, mide la salud de la arquitectura y te dice qué se rompe si cambias un módulo.",
+    "tags": ["Python", "Android", "Gradle", "Mermaid"],
     "link": "https://github.com/pfranccino/android-gradle-analyzer",
     "preview": {
-      "type": "terminal",
+      "source": "Salida de ejemplo del README",
       "lines": [
-        { "type": "cmd", "text": "$ analyze ./my-app --output html" },
+        { "type": "cmd", "text": "$ gradle-analyzer tests/fixtures/leaf_coupling" },
+        { "type": "dim", "text": "📁 Scanning modules in: .../tests/fixtures/leaf_coupling" },
+        { "type": "ok", "text": "✓ 10 modules found" },
         { "type": "blank" },
-        { "type": "key", "text": "Modules          47" },
-        { "type": "key", "text": "Dependencies     312" },
-        { "type": "key", "text": "Avg fan-in       6.4" },
-        { "type": "key", "text": "Max depth        9" },
+        { "type": "dim", "text": "🔍 Analyzing dependencies (engine: static)..." },
+        { "type": "ok", "text": "  ✓ app: 3 dependency(ies)" },
+        { "type": "ok", "text": "  ✓ payments: 5 dependency(ies)" },
+        { "type": "dim", "text": "  ○ core: no internal dependencies" },
+        { "type": "dim", "text": "  ..." },
+        { "type": "ok", "text": "✓ Analysis complete: 15 dependencies detected" },
         { "type": "blank" },
-        { "type": "warn", "text": "⚠ bottlenecks" },
-        { "type": "dim", "text": "  core-network     in: 28" },
-        { "type": "dim", "text": "  core-database    in: 22" },
-        { "type": "blank" },
-        { "type": "ok", "text": "→ ./build/deps-graph.html" }
-      ]
-    }
-  },
-  {
-    "id": "habit-tracker-backend",
-    "title": "habit-tracker-backend",
-    "kicker": "FastAPI · Firebase · Backend",
-    "description": "API gamificada para tracking de hábitos. Sistema de rachas, niveles de XP y notificaciones. Una exploración de backend moderno con FastAPI y Firebase como pareja simple para shipear rápido.",
-    "tags": ["TypeScript", "Python", "FastAPI", "#vibecoding"],
-    "link": "https://github.com/pfranccino/habit-tracker-backend",
-    "preview": {
-      "type": "code",
-      "lines": [
-        { "type": "com", "text": "# app/api/habits.py" },
-        { "type": "blank" },
-        { "type": "key", "text": "@router.post(\"/habits/{id}/check-in\")" },
-        { "type": "plain", "text": "async def check_in(" },
-        { "type": "plain", "text": "  id: str," },
-        { "type": "plain", "text": "  user: User = Depends(get_user)," },
-        { "type": "plain", "text": "):" },
-        { "type": "plain", "text": "  streak = await service.increment(user.id, id)" },
-        { "type": "plain", "text": "  return CheckInResponse(" },
-        { "type": "plain", "text": "    streak_days=streak.current," },
-        { "type": "plain", "text": "    xp_gained=streak.xp_award," },
-        { "type": "plain", "text": "  )" }
+        { "type": "key", "text": "✓ Mermaid:  diagrams/gradle-dependencies.mmd" },
+        { "type": "key", "text": "✓ Report:   diagrams/gradle-report.txt" }
       ]
     }
   }

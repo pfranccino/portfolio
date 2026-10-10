@@ -9,11 +9,10 @@ const Stack = () => {
           <div className="sec-num">02 / Stack</div>
           <div>
             <h2 className="sec-title">
-              Lo que uso<br /><span className="muted">cuando entrego.</span>
+              Con qué<br /><span className="muted">construyo.</span>
             </h2>
             <p className="sec-lede">
-              Andamio principal. La mayor parte del tiempo estoy en Kotlin + Compose;
-              el resto cambia con cada proyecto.
+              Casi todo mi día pasa en Kotlin y Compose. Lo demás cambia con cada proyecto.
             </p>
           </div>
         </div>

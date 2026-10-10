@@ -3,12 +3,11 @@ import styles from './Hero.module.css';
 const Hero = () => {
   return (
     <section className={styles.hero} id="hero">
-      <div className={styles.gridBg} aria-hidden="true" />
       <div className="wrap">
 
-        <div className={styles.eyebrow}>
+        <p className={styles.eyebrow}>
           Disponible para conversar · Santiago, Chile
-        </div>
+        </p>
 
         <h1 className={styles.h1}>
           Desarrollador <span className={styles.accent}>Android&nbsp;Senior.</span><br />
@@ -17,7 +16,7 @@ const Hero = () => {
         </h1>
 
         <p className={styles.lede}>
-          +5 años construyendo <strong>Android nativo en producción</strong>, hoy en fintech.
+          +7 años construyendo <strong>Android nativo en producción</strong>, hoy en fintech.
           Escribo en Medium sobre lo que vivo en cada proyecto y publico herramientas
           open-source para mantener proyectos Gradle bajo control.
         </p>
@@ -32,23 +31,23 @@ const Hero = () => {
 
         <div className={styles.ctas}>
           <a href="mailto:paul.ayala023@gmail.com" className="btn primary">
-            Hablemos <span className="arrow">↗</span>
+            Hablemos por mail
           </a>
         </div>
 
         <div className={styles.metaRow}>
           <div className={styles.stats}>
-            <div className={styles.stat}>
-              <div className={styles.statV}>+5</div>
-              <div className={styles.statL}>Años Android</div>
+            <div>
+              <div className={styles.statV}>+7</div>
+              <div className={styles.statL}>Años en Android</div>
             </div>
-            <div className={styles.stat}>
-              <div className={styles.statV}>3</div>
-              <div className={styles.statL}>Herramientas OSS</div>
+            <div>
+              <div className={styles.statV}>2</div>
+              <div className={styles.statL}>Herramientas open-source</div>
             </div>
-            <div className={styles.stat}>
-              <div className={styles.statV}>4</div>
-              <div className={styles.statL}>Artículos publicados</div>
+            <div>
+              <div className={styles.statV}>6</div>
+              <div className={styles.statL}>Artículos en Medium</div>
             </div>
           </div>
 
@@ -57,7 +56,7 @@ const Hero = () => {
               <img
                 src="/img/profile-stamp.webp"
                 srcSet="/img/profile-stamp.webp 1x, /img/profile-stamp-2x.webp 2x"
-                alt="Paul Franccino — Desarrollador Android Senior"
+                alt="Paul Franccino, Desarrollador Android Senior"
                 width={120}
                 height={150}
                 fetchpriority="high"
@@ -69,19 +68,6 @@ const Hero = () => {
           </div>
         </div>
 
-      </div>
-
-      <div className={styles.ticker} aria-hidden="true">
-        <div className={styles.tickerTrack}>
-          <span>Kotlin</span><span>Jetpack Compose</span><span>MVI Architecture</span>
-          <span>Coroutines &amp; Flow</span><span>Hilt</span><span>Room</span>
-          <span>Retrofit</span><span>JUnit5</span><span>Mockk</span>
-          <span>Fastlane</span><span>GitHub Actions</span><span>Modularización</span>
-          <span>Kotlin</span><span>Jetpack Compose</span><span>MVI Architecture</span>
-          <span>Coroutines &amp; Flow</span><span>Hilt</span><span>Room</span>
-          <span>Retrofit</span><span>JUnit5</span><span>Mockk</span>
-          <span>Fastlane</span><span>GitHub Actions</span><span>Modularización</span>
-        </div>
       </div>
     </section>
   );

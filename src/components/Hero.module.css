@@ -1,45 +1,24 @@
 .hero {
-  padding: 9rem 0 0 0;
-  position: relative;
-  overflow: hidden;
+  padding: 9rem 0 5rem 0;
 }
 
-.gridBg {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(to right, color-mix(in srgb, var(--ink) 4%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in srgb, var(--ink) 4%, transparent) 1px, transparent 1px);
-  background-size: 80px 80px;
-  mask-image: radial-gradient(ellipse at top left, black 30%, transparent 75%);
-  -webkit-mask-image: radial-gradient(ellipse at top left, black 30%, transparent 75%);
-}
-
+/* The dot marks a real state (open to conversations), so it stays static: no pulse, no glow */
 .eyebrow {
   font-family: var(--font-m);
-  font-size: .78rem;
-  letter-spacing: .14em;
-  text-transform: uppercase;
+  font-size: .82rem;
   color: var(--ink-2);
   display: inline-flex;
   align-items: center;
-  gap: .65rem;
+  gap: .6rem;
   margin-bottom: 2rem;
-  padding: .4rem .85rem .4rem .65rem;
-  border: 1px solid var(--rule);
-  border-radius: 99px;
-  background: var(--surface);
-  position: relative;
 }
 
 .eyebrow::before {
   content: "";
-  width: .45rem;
-  height: .45rem;
+  width: .5rem;
+  height: .5rem;
   border-radius: 50%;
   background: var(--ok);
-  animation: pulse 2.4s ease-in-out infinite;
   flex-shrink: 0;
 }
 
@@ -51,7 +30,6 @@
   letter-spacing: -.035em;
   max-width: 18ch;
   margin-bottom: 2rem;
-  position: relative;
 }
 
 .accent {
@@ -71,7 +49,6 @@
   color: var(--ink-2);
   max-width: 54ch;
   margin-bottom: 2.5rem;
-  position: relative;
 }
 
 .lede strong {
@@ -84,7 +61,6 @@
   flex-wrap: wrap;
   gap: .5rem;
   margin-bottom: 3rem;
-  position: relative;
 }
 
 .ctas {
@@ -93,7 +69,6 @@
   align-items: center;
   margin-bottom: 4rem;
   flex-wrap: wrap;
-  position: relative;
 }
 
 .metaRow {
@@ -103,15 +78,12 @@
   align-items: end;
   border-top: 1px solid var(--rule);
   padding-top: 2rem;
-  position: relative;
 }
 
 .stats {
   display: flex;
   gap: 3rem;
 }
-
-.stat {}
 
 .statV {
   font-family: var(--font-h);
@@ -123,10 +95,8 @@
 }
 
 .statL {
-  font-family: var(--font-m);
-  font-size: .7rem;
-  letter-spacing: .12em;
-  text-transform: uppercase;
+  font-family: var(--font-b);
+  font-size: .85rem;
   color: var(--ink-2);
   margin-top: .45rem;
 }
@@ -142,7 +112,7 @@
   position: relative;
   width: 120px;
   height: 150px;
-  border-radius: 4px;
+  border-radius: var(--radius);
   overflow: hidden;
   background: var(--rule);
 }
@@ -165,8 +135,8 @@
 
 .cap {
   font-family: var(--font-m);
-  font-size: .68rem;
-  letter-spacing: .08em;
+  font-size: .72rem;
+  letter-spacing: .02em;
   color: var(--ink-2);
   text-align: right;
   line-height: 1.5;
@@ -177,56 +147,15 @@
   font-weight: 600;
 }
 
-/* Marquee ticker */
-.ticker {
-  margin-top: 4rem;
-  border-top: 1px solid var(--rule);
-  padding: .85rem 0;
-  overflow: hidden;
-  background: var(--bg);
-}
-
-.tickerTrack {
-  display: flex;
-  gap: 3rem;
-  animation: scroll 38s linear infinite;
-  width: max-content;
-  font-family: var(--font-m);
-  font-size: .78rem;
-  color: var(--ink-3);
-  letter-spacing: .06em;
-  text-transform: uppercase;
-}
-
-.tickerTrack span {
-  display: inline-flex;
-  align-items: center;
-  gap: .8rem;
-}
-
-.tickerTrack span::after {
-  content: "·";
-  color: var(--ink-3);
-}
-
-@keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
 @media (max-width: 760px) {
-  .hero { padding: 7rem 0 0 0; }
+  .hero { padding: 7rem 0 4rem 0; }
   .h1 { font-size: clamp(2.6rem, 11vw, 4rem); max-width: none; }
   .lede { font-size: 1.02rem; }
   .metaRow { grid-template-columns: 1fr; gap: 2rem; }
-  .stats { gap: 1.8rem; }
+  .stats { gap: 1.8rem; flex-wrap: wrap; }
   .statV { font-size: 1.8rem; }
   .signature { flex-direction: row; align-items: center; gap: 1rem; }
   .stamp { width: 88px; height: 110px; }
   .cap { text-align: left; }
   .ctas { margin-bottom: 3rem; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .tickerTrack { animation: none; }
 }

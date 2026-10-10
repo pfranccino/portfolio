@@ -48,7 +48,6 @@
 .current .dot::before {
   background: var(--accent);
   border-color: var(--accent);
-  box-shadow: 0 0 0 4px color-mix(in oklch, var(--accent) 18%, transparent);
 }
 
 .content {
@@ -83,8 +82,7 @@
 
 .period {
   font-family: var(--font-m);
-  font-size: .74rem;
-  letter-spacing: .06em;
+  font-size: .78rem;
   color: var(--ink-3);
   white-space: nowrap;
   padding-top: .3rem;
