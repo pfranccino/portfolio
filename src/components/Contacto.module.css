@@ -7,10 +7,13 @@
 
 .secNum {
   font-family: var(--font-m);
-  font-size: .78rem;
-  letter-spacing: .14em;
-  text-transform: uppercase;
+  font-size: .8rem;
+  letter-spacing: .02em;
   color: var(--inv-ink-3);
+}
+
+.contacto :focus-visible {
+  outline-color: var(--inv-ink);
 }
 
 .contacto :global(.sec-head) {
@@ -55,25 +58,18 @@
   font-family: var(--font-h);
   font-weight: 600;
   font-size: 1.3rem;
-  color: var(--inv-bg);
+  color: var(--bg);
   padding: 1.1rem 2rem;
   background: var(--accent);
   border: 1px solid var(--accent);
-  border-radius: 99px;
-  transition: transform .2s, box-shadow .2s, background .2s;
+  border-radius: var(--radius-pill);
+  overflow-wrap: anywhere;
+  transition: transform .2s, box-shadow .2s;
 }
 
 .mailPill:hover {
   transform: translateY(-2px);
   box-shadow: 0 0 24px color-mix(in oklch, var(--accent) 40%, transparent);
-}
-
-.mailPill span {
-  transition: transform .2s;
-}
-
-.mailPill:hover span {
-  transform: translate(2px, -2px);
 }
 
 .channels {
@@ -98,9 +94,7 @@
 
 .chLabel {
   font-family: var(--font-m);
-  font-size: .74rem;
-  letter-spacing: .14em;
-  text-transform: uppercase;
+  font-size: .78rem;
   color: var(--inv-ink-3);
 }
 
@@ -124,4 +118,8 @@
 @media (max-width: 880px) {
   .grid { grid-template-columns: 1fr; gap: 3rem; }
   .contacto { padding: 5rem 0 6rem 0; }
+}
+
+@media (max-width: 520px) {
+  .mailPill { font-size: 1.05rem; padding: 1rem 1.4rem; }
 }

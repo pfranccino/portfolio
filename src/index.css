@@ -1,32 +1,37 @@
-/* Google Fonts moved to index.html <head> for Web Vitals */
-
 :root {
-  /* — Core palette — */
-  --bg: #F8FAFC;
-  --bg-2: #EEF2F7;
-  --surface: #FFFFFF;
-  --ink: #0F172A;
-  --ink-2: #475569;
-  --ink-3: #6B7A8D;
-  --rule: #E2E8F0;
-  --rule-soft: #EEF2F7;
-  --accent: #4F46E5;
-  --accent-soft: #EEF0FF;
-  --ok: oklch(0.55 0.14 150);
+  /* Android green muted to a paper tone, with an ember accent from the copy ("desde el barro", the asado) */
+  --bg: #DCE4D3;
+  --bg-2: #CED8C3;
+  --surface: #EAF0E4;
+  --ink: #14201A;
+  --ink-2: #3A4A40;
+  --ink-3: #4E5E55;
+  --rule: #B4C2A8;
+  --rule-soft: #CED8C3;
+  --accent: #A63B15;
+  --accent-soft: #F0D9CC;
+  --ok: #2E7D46;
 
-  /* — Inverted section (Contacto / Footer) — */
-  --inv-bg: #0F172A;
-  --inv-ink: #F8FAFC;
-  --inv-ink-2: #CBD5E1;
-  --inv-ink-3: #64748B;
-  --inv-rule: #334155;
+  /* Inverted section (Contacto, Footer, code previews) */
+  --inv-bg: #14201A;
+  --inv-ink: #E6EDE0;
+  --inv-ink-2: #C2CEBB;
+  --inv-ink-3: #93A38E;
+  --inv-rule: #2C3A31;
 
-  /* — Typography — */
+  /* Code previews always sit on --inv-bg */
+  --code-ok: #8CCB8A;
+  --code-warn: #E3B95B;
+  --code-err: #EE8A6F;
+  --code-key: #E9B08F;
+
   --font-h: 'Outfit', sans-serif;
   --font-b: 'Plus Jakarta Sans', sans-serif;
   --font-m: 'JetBrains Mono', ui-monospace, monospace;
 
-  /* — Spacing — */
+  --radius: 6px;
+  --radius-pill: 99px;
+
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 2rem;
@@ -35,44 +40,48 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0F1219;
-    --bg-2: #181D27;
-    --surface: #1A2030;
-    --ink: #E2E8F0;
-    --ink-2: #94A3B8;
-    --ink-3: #7B8BA0;
-    --rule: #2A3040;
-    --rule-soft: #1E2535;
-    --accent: #818CF8;
-    --accent-soft: #1E1B4B;
-    --ok: oklch(0.65 0.16 150);
-    --inv-bg: #080B10;
-    --inv-ink: #E2E8F0;
-    --inv-ink-2: #94A3B8;
-    --inv-ink-3: #64748B;
-    --inv-rule: #1E2535;
+    --bg: #0F1612;
+    --bg-2: #16201A;
+    --surface: #1C2720;
+    --ink: #E3EBDD;
+    --ink-2: #B0BEAA;
+    --ink-3: #8E9D89;
+    --rule: #2B382F;
+    --rule-soft: #1F2A23;
+    --accent: #EF7E4E;
+    --accent-soft: #3A2318;
+    --ok: #5BBF7A;
+    --inv-bg: #090E0B;
+    --inv-ink: #E3EBDD;
+    --inv-ink-2: #B0BEAA;
+    --inv-ink-3: #8E9D89;
+    --inv-rule: #1F2A23;
     color-scheme: dark;
   }
 }
 
 :root[data-theme="dark"] {
-  --bg: #0F1219;
-  --bg-2: #181D27;
-  --surface: #1A2030;
-  --ink: #E2E8F0;
-  --ink-2: #94A3B8;
-  --ink-3: #7B8BA0;
-  --rule: #2A3040;
-  --rule-soft: #1E2535;
-  --accent: #818CF8;
-  --accent-soft: #1E1B4B;
-  --ok: oklch(0.65 0.16 150);
-  --inv-bg: #080B10;
-  --inv-ink: #E2E8F0;
-  --inv-ink-2: #94A3B8;
-  --inv-ink-3: #64748B;
-  --inv-rule: #1E2535;
+  --bg: #0F1612;
+  --bg-2: #16201A;
+  --surface: #1C2720;
+  --ink: #E3EBDD;
+  --ink-2: #B0BEAA;
+  --ink-3: #8E9D89;
+  --rule: #2B382F;
+  --rule-soft: #1F2A23;
+  --accent: #EF7E4E;
+  --accent-soft: #3A2318;
+  --ok: #5BBF7A;
+  --inv-bg: #090E0B;
+  --inv-ink: #E3EBDD;
+  --inv-ink-2: #B0BEAA;
+  --inv-ink-3: #8E9D89;
+  --inv-rule: #1F2A23;
   color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
 }
 
 * {
@@ -83,6 +92,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
@@ -98,7 +108,13 @@ a {
   text-decoration: none;
 }
 
-/* ── Layout ── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Layout */
 .wrap {
   max-width: 1280px;
   margin: 0 auto;
@@ -110,7 +126,7 @@ a {
   .wrap { padding: 0 1.25rem; }
 }
 
-/* ── Sections ── */
+/* Sections */
 .sec {
   padding: var(--spacing-xl) 0;
   border-top: 1px solid var(--rule);
@@ -126,9 +142,8 @@ a {
 
 .sec-num {
   font-family: var(--font-m);
-  font-size: .78rem;
-  letter-spacing: .14em;
-  text-transform: uppercase;
+  font-size: .8rem;
+  letter-spacing: .02em;
   color: var(--ink-3);
 }
 
@@ -158,13 +173,13 @@ a {
   .sec-head { grid-template-columns: 1fr; gap: 1rem; }
 }
 
-/* ── Buttons ── */
+/* Buttons */
 .btn {
   font-family: var(--font-h);
   font-weight: 600;
   font-size: .95rem;
   padding: .95rem 1.5rem;
-  border-radius: 99px;
+  border-radius: var(--radius-pill);
   display: inline-flex;
   align-items: center;
   gap: .5rem;
@@ -183,48 +198,24 @@ a {
   background: var(--accent);
 }
 
-.btn.ghost {
-  color: var(--ink);
-  border-color: var(--ink);
-}
-
-.btn.ghost:hover {
-  background: var(--ink);
-  color: var(--bg);
-}
-
-.btn .arrow {
-  transition: transform .2s ease;
-}
-
-.btn:hover .arrow {
-  transform: translate(2px, -2px);
-}
-
-/* ── Chips ── */
+/* Chips */
 .chip {
   font-family: var(--font-m);
   font-size: .74rem;
   padding: .4rem .75rem;
-  border-radius: 99px;
+  border-radius: var(--radius-pill);
   border: 1px solid var(--rule);
   color: var(--ink-2);
   background: var(--surface);
   letter-spacing: .01em;
 }
 
-/* ── Eyebrow pulse ── */
-@keyframes pulse {
-  0%, 100% { box-shadow: 0 0 0 0 color-mix(in oklch, var(--ok) 50%, transparent); }
-  50% { box-shadow: 0 0 0 6px color-mix(in oklch, var(--ok) 0%, transparent); }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  @keyframes pulse { 0%, 100% { box-shadow: none; } }
-  .btn, .btn .arrow { transition: none; }
+  html { scroll-behavior: auto; }
+  .btn { transition: none; }
 }
 
-/* ── Scroll entrance ── */
+/* Scroll entrance */
 .sec {
   opacity: 0;
   transform: translateY(24px);
@@ -243,11 +234,4 @@ a {
     transform: none;
     transition: none;
   }
-}
-
-/* ── Legacy container alias ── */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-lg);
 }

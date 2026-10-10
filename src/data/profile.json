@@ -1,11 +1,7 @@
 {
   "name": "Paul Franccino Ayala",
   "role": "Desarrollador Android Senior",
-  "email": "paul.ayala023@gmail.com",
-  "phone": "+56923890855",
   "location": "Santiago, Chile",
-  "bio": "Impulsado por la curiosidad de crear. Me apasiona el código, la arquitectura y el mundo mobile. Busco entender realmente qué es el software robusto y cómo construirlo. Siempre estoy explorando nuevas tecnologías, porque experimentar es la mejor forma de aprender. Hoy en el mundo Mobile, mañana... quién sabe.",
-  "current_focus": "Actualmente: Trabajando en MACH en la modernización de flujos de activación y recuperación de cuenta.",
   "social": {
     "github": "https://github.com/pfranccino",
     "email": "mailto:paul.ayala023@gmail.com",
@@ -13,20 +9,6 @@
     "medium": "https://pfranccino.medium.com/",
     "linkedin": "https://www.linkedin.com/in/paul-franccino-ayala/"
   },
-  "stats": [
-    {
-      "label": "Años Android",
-      "value": "+5"
-    },
-    {
-      "label": "Herramientas OSS",
-      "value": "3"
-    },
-    {
-      "label": "Artículos publicados",
-      "value": "4"
-    }
-  ],
   "hobbies": [
     {
       "name": "Fanático de Lego",
@@ -35,41 +17,41 @@
     },
     {
       "name": "Fanático parrillero",
-      "title": "Paciencia, fuego, gente.",
-      "desc": "Asados largos para amigos y familia. El asado bueno no es la carne — es esperar el momento justo del fuego, igual que en producción."
+      "title": "El fuego no se apura.",
+      "desc": "Asados largos para amigos y familia. Lo importante no es la carne, es esperar el momento justo del fuego, igual que en producción."
     },
     {
       "name": "Melómano",
       "title": "Programo con música.",
-      "desc": "Siempre con audífonos. Tengo una playlist Mood en Spotify que comparto si la pides."
+      "desc": "Siempre con audífonos. Esta es la playlist Mood que armé en Spotify para programar."
     }
   ],
   "experience": [
     {
       "company": "MACH",
       "role": "Desarrollador Android Senior",
-      "period": "2021 · 08 — hoy",
+      "period": "2021 · 08 a hoy",
       "current": true,
       "description": "Desarrollo y mantenimiento de aplicación financiera Android con base de usuarios masiva. Migración de Onboarding y Recuperación de Cuenta. Implementación de arquitectura modular y patrones MVVM / MVI."
     },
     {
       "company": "Trust Technologies",
       "role": "Desarrollador Android",
-      "period": "2020 · 05 — 2021 · 07",
+      "period": "2020 · 05 a 2021 · 07",
       "current": false,
       "description": "Desarrollo de SDKs de notificaciones y autenticación. Implementación de CI/CD con GitLab y Fastlane."
     },
     {
       "company": "Jumpitt Labs",
       "role": "Desarrollador Android",
-      "period": "2019 · 05 — 2020 · 04",
+      "period": "2019 · 05 a 2020 · 04",
       "current": false,
       "description": "Biblioteca de testing de hardware y pruebas automatizadas para componentes críticos."
     },
     {
       "company": "Zoo Company",
       "role": "Practicante Desarrollador",
-      "period": "2018 · 12 — 2019 · 03",
+      "period": "2018 · 12 a 2019 · 03",
       "current": false,
       "description": "Desarrollo de APIs RESTful con Node.js y panel web con Angular."
     }

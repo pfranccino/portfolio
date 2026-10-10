@@ -2,7 +2,7 @@
   {
     "category": "Lenguajes",
     "items": [
-      { "name": "Kotlin", "note": "2019 — hoy" },
+      { "name": "Kotlin", "note": "desde 2019" },
       { "name": "Java", "note": "Legacy / interop" },
       { "name": "Python", "note": "Tooling personal" }
     ]

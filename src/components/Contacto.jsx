@@ -23,7 +23,7 @@ const Contacto = () => {
             </h2>
             <p className={styles.lead}>
               Si tienes un proyecto Android complejo, un dolor de cabeza con Gradle,
-              o solo quieres comparar notas sobre arquitectura — escríbeme.
+              o solo quieres comparar notas sobre arquitectura, escríbeme.
               Suelo contestar dentro de 48 hrs.
             </p>
             <a
@@ -31,7 +31,7 @@ const Contacto = () => {
               className={styles.mailPill}
               aria-label="Enviar email a Paul Franccino"
             >
-              paul.ayala023@gmail.com <span>↗</span>
+              paul.ayala023@gmail.com
             </a>
           </div>
 
@@ -43,11 +43,11 @@ const Contacto = () => {
                 href={ch.href}
                 target="_blank"
                 rel="noreferrer"
-                aria-label={`${ch.label} de Paul Franccino`}
+                aria-label={`${ch.label} de Paul Franccino (se abre en otra pestaña)`}
               >
                 <span className={styles.chLabel}>{ch.label}</span>
                 <span className={styles.chHandle}>{ch.handle}</span>
-                <span className={styles.chExt}>↗</span>
+                <span className={styles.chExt} aria-hidden="true">↗</span>
               </a>
             ))}
           </div>

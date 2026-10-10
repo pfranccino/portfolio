@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -13,57 +13,17 @@
       overflow: hidden;
     }
 
+    /* Same tokens as the site's light theme (src/index.css) */
     body {
-      background: #0F172A;
+      background: #DCE4D3;
+      color: #14201A;
       font-family: 'Outfit', sans-serif;
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      gap: 24px;
       padding: 76px 90px;
       position: relative;
-    }
-
-    /* Grid texture */
-    body::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
-      background-size: 56px 56px;
-      pointer-events: none;
-    }
-
-    /* Indigo glow top-right */
-    body::after {
-      content: '';
-      position: absolute;
-      top: -80px;
-      right: -80px;
-      width: 480px;
-      height: 480px;
-      background: radial-gradient(circle, rgba(79,70,229,.22) 0%, transparent 68%);
-      pointer-events: none;
-    }
-
-    /* Green glow bottom-left */
-    .glow-green {
-      position: absolute;
-      bottom: -60px;
-      left: -60px;
-      width: 320px;
-      height: 320px;
-      background: radial-gradient(circle, rgba(74,222,128,.1) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .content {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 22px;
-      flex: 1;
     }
 
     .eyebrow {
@@ -71,124 +31,59 @@
       align-items: center;
       gap: 10px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 13px;
-      color: #475569;
-      letter-spacing: .12em;
-      text-transform: uppercase;
+      font-size: 16px;
+      color: #3A4A40;
     }
 
     .dot {
-      width: 8px;
-      height: 8px;
+      width: 9px;
+      height: 9px;
       border-radius: 50%;
-      background: #4ADE80;
-      box-shadow: 0 0 0 4px rgba(74,222,128,.22);
-      flex-shrink: 0;
+      background: #2E7D46;
     }
 
     .name {
-      font-size: 80px;
-      font-weight: 700;
-      color: #F1F5F9;
-      letter-spacing: -.04em;
+      font-size: 96px;
+      font-weight: 500;
+      letter-spacing: -.035em;
       line-height: .95;
     }
 
-    .name .accent {
-      color: #6366F1;
-    }
-
     .role {
-      font-size: 26px;
+      font-size: 34px;
       font-weight: 400;
-      color: #64748B;
+      color: #4E5E55;
       letter-spacing: -.01em;
-      margin-top: -4px;
     }
 
-    .chips {
-      display: flex;
-      gap: 10px;
-      margin-top: 4px;
-      flex-wrap: wrap;
-    }
-
-    .chip {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      padding: 5px 13px;
-      border-radius: 99px;
-      border: 1px solid #1E293B;
-      color: #475569;
-      background: rgba(255,255,255,.025);
-    }
-
-    .url {
-      position: absolute;
-      bottom: 48px;
-      right: 90px;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 8px;
-    }
-
-    .cta {
-      font-family: 'Outfit', sans-serif;
-      font-size: 14px;
+    .role b {
+      color: #A63B15;
       font-weight: 600;
-      color: #F1F5F9;
-      background: #4F46E5;
-      padding: 8px 18px;
-      border-radius: 99px;
-      letter-spacing: -.01em;
     }
 
-    .domain {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 13px;
-      color: #334155;
-      letter-spacing: .06em;
-    }
-
-    /* Border frame */
-    .frame {
+    .foot {
       position: absolute;
-      inset: 0;
-      border: 1px solid rgba(255,255,255,.055);
-      pointer-events: none;
-      z-index: 2;
+      left: 90px;
+      right: 90px;
+      bottom: 56px;
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #B4C2A8;
+      padding-top: 20px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      color: #3A4A40;
     }
   </style>
 </head>
 <body>
-  <div class="glow-green"></div>
-  <div class="frame"></div>
+  <div class="eyebrow"><span class="dot"></span>Disponible para conversar · Santiago, Chile</div>
+  <div class="name">Paul Franccino</div>
+  <div class="role"><b>Android Senior.</b> Construyendo con Kotlin desde 2019.</div>
 
-  <div class="content">
-    <div class="eyebrow">
-      <div class="dot"></div>
-      Disponible para conversar · Santiago, Chile
-    </div>
-
-    <div class="name">
-      Paul<br><span class="accent">Franccino.</span>
-    </div>
-
-    <div class="role">Desarrollador Android Senior</div>
-
-    <div class="chips">
-      <span class="chip">Kotlin</span>
-      <span class="chip">Jetpack Compose</span>
-      <span class="chip">MVI</span>
-      <span class="chip">Fintech · MACH</span>
-    </div>
-  </div>
-
-  <div class="url">
-    <div class="cta">Ver portfolio ↗</div>
-    <div class="domain">pfranccino.dev</div>
+  <div class="foot">
+    <span>Kotlin · Jetpack Compose · MVI</span>
+    <span>pfranccino.dev</span>
   </div>
 </body>
 </html>

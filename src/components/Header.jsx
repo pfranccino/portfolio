@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import styles from './Header.module.css';
 
@@ -12,10 +12,19 @@ const NAV_LINKS = [
 
 const SECTION_IDS = NAV_LINKS.map(l => l.href.slice(1));
 
+const currentTheme = () => {
+  const forced = document.documentElement.dataset.theme;
+  if (forced) return forced;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+};
+
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeId, setActiveId] = useState('');
+  const [theme, setTheme] = useState(currentTheme);
+  const burgerRef = useRef(null);
+  const firstLinkRef = useRef(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -46,22 +55,43 @@ const Header = () => {
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
+    if (!menuOpen) return () => { document.body.style.overflow = ''; };
+
+    firstLinkRef.current?.focus();
+    const onKey = (e) => {
+      if (e.key !== 'Escape') return;
+      setMenuOpen(false);
+      burgerRef.current?.focus();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      document.body.style.overflow = '';
+    };
   }, [menuOpen]);
 
   const closeMenu = () => setMenuOpen(false);
+
+  const toggleTheme = () => {
+    const next = theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch { /* storage blocked: theme still applies for this visit */ }
+    setTheme(next);
+  };
+
+  const themeLabel = theme === 'dark' ? 'Modo claro' : 'Modo oscuro';
 
   const drawer = (
     <div
       id="mobile-menu"
       className={`${styles.drawer} ${menuOpen ? styles.drawerOpen : ''}`}
-      aria-hidden={!menuOpen}
+      inert={!menuOpen}
     >
       <nav aria-label="Menú móvil">
         <ul>
-          {NAV_LINKS.map(({ href, label }) => (
+          {NAV_LINKS.map(({ href, label }, i) => (
             <li key={href}>
-              <a href={href} onClick={closeMenu}>{label}</a>
+              <a href={href} onClick={closeMenu} ref={i === 0 ? firstLinkRef : undefined}>{label}</a>
             </li>
           ))}
         </ul>
@@ -94,19 +124,27 @@ const Header = () => {
             </ul>
           </nav>
 
-          <a href="mailto:paul.ayala023@gmail.com" className={styles.mail}>
-            paul.ayala023@gmail.com
-          </a>
+          <div className={styles.end}>
+            <a href="mailto:paul.ayala023@gmail.com" className={styles.mail}>
+              paul.ayala023@gmail.com
+            </a>
 
-          <button
-            className={`${styles.burger} ${menuOpen ? styles.burgerOpen : ''}`}
-            onClick={() => setMenuOpen((o) => !o)}
-            aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
-            aria-expanded={menuOpen}
-            aria-controls="mobile-menu"
-          >
-            <span /><span /><span />
-          </button>
+            <button type="button" className={styles.theme} onClick={toggleTheme}>
+              {themeLabel}
+            </button>
+
+            <button
+              ref={burgerRef}
+              type="button"
+              className={`${styles.burger} ${menuOpen ? styles.burgerOpen : ''}`}
+              onClick={() => setMenuOpen((o) => !o)}
+              aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
+              aria-expanded={menuOpen}
+              aria-controls="mobile-menu"
+            >
+              <span /><span /><span />
+            </button>
+          </div>
         </div>
       </header>
 

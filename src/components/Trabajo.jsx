@@ -2,13 +2,9 @@ import projects from '../data/projects.json';
 import styles from './Trabajo.module.css';
 
 const Preview = ({ preview }) => (
-  <div className={styles.preview} aria-hidden="true">
-    <div className={styles.previewBar}>
-      <span className={styles.dotRed} />
-      <span className={styles.dotYellow} />
-      <span className={styles.dotGreen} />
-    </div>
-    <div className={styles.previewCode}>
+  <figure className={styles.preview}>
+    <figcaption className={styles.previewBar}>{preview.source}</figcaption>
+    <div className={styles.previewCode} aria-hidden="true">
       {preview.lines.map((line, i) => {
         if (line.type === 'blank') return <div key={i}>&nbsp;</div>;
         return (
@@ -18,7 +14,7 @@ const Preview = ({ preview }) => (
         );
       })}
     </div>
-  </div>
+  </figure>
 );
 
 const Trabajo = () => {
@@ -33,7 +29,7 @@ const Trabajo = () => {
             </h2>
             <p className="sec-lede">
               Mis apps de trabajo son privadas, pero las herramientas que construyo para mí
-              están abiertas. Pequeñas, útiles, escritas para escalar mi propio día.
+              están abiertas. Nacieron para resolver problemas de mi propio día a día.
             </p>
           </div>
         </div>
@@ -55,9 +51,9 @@ const Trabajo = () => {
                   href={project.link}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label={`Ver ${project.title} en GitHub`}
+                  aria-label={`Ver ${project.title} en GitHub (se abre en otra pestaña)`}
                 >
-                  Ver en GitHub <span className={styles.arr}>↗</span>
+                  Ver en GitHub <span className={styles.arr} aria-hidden="true">↗</span>
                 </a>
               </div>
               <Preview preview={project.preview} />
