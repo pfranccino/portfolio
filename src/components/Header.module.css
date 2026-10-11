@@ -109,22 +109,30 @@
   border-color: var(--ink);
 }
 
+/* Visible "Menú" label: a bare icon hides the only way around the page on a phone */
 .burger {
   display: none;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 5px;
-  width: 44px;
-  height: 44px;
+  gap: .6rem;
+  min-height: 44px;
+  padding: 0 .25rem 0 .5rem;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0;
+  font-family: var(--font-b);
+  font-weight: 600;
+  font-size: .95rem;
+  color: var(--ink);
   flex-shrink: 0;
 }
 
-.burger span {
+.bars {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bars span {
   display: block;
   width: 24px;
   height: 2px;
@@ -134,9 +142,9 @@
 }
 
 /* Bars are 2px with a 5px gap, so the outer ones travel 7px to meet in the middle */
-.burgerOpen span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.burgerOpen span:nth-child(2) { opacity: 0; }
-.burgerOpen span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.burgerOpen .bars span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burgerOpen .bars span:nth-child(2) { opacity: 0; }
+.burgerOpen .bars span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 .drawer {
   display: none;
@@ -176,28 +184,29 @@
   border-bottom: 1px solid var(--rule);
 }
 
+.drawerEnd {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
 .drawerMail {
   font-family: var(--font-m);
   font-size: .85rem;
   color: var(--ink-2);
-  margin-top: auto;
   padding: .75rem 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .drawer, .drawerOpen, .burger span { transition: none; }
+  .drawer, .drawerOpen, .bars span { transition: none; }
 }
 
+/* On phones the theme button moves into the drawer so the header holds only brand and menu */
 @media (max-width: 760px) {
   .nav { display: none; }
-  .end { gap: .5rem; }
+  .themeDesktop { display: none; }
   .burger { display: flex; }
   .drawer { display: flex; }
-}
-
-/* At 360px the brand, theme button and burger only fit with tighter gaps */
-@media (max-width: 520px) {
-  .row { gap: .75rem; }
-  .brand { gap: .5rem; font-size: .95rem; }
-  .theme { padding: 0 .65rem; font-size: .82rem; }
 }

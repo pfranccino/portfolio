@@ -7,8 +7,7 @@
     "email": "mailto:paul.ayala023@gmail.com",
     "spotify": "https://open.spotify.com/playlist/3OLbJ8Ws43vtOeSxXN7BtJ?si=myoF7zIQQUezmQjEWkluJA",
     "medium": "https://pfranccino.medium.com/",
-    "linkedin": "https://www.linkedin.com/in/paul-franccino-ayala/",
-    "skills": "https://github.com/pfranccino/pfranccino-dev-skills"
+    "linkedin": "https://www.linkedin.com/in/paul-franccino-ayala/"
   },
   "hobbies": [
     {
@@ -19,7 +18,7 @@
     {
       "name": "Fanático parrillero",
       "title": "El fuego no se apura.",
-      "desc": "Asados largos para amigos y familia. Lo importante no es la carne, es esperar el momento justo del fuego, igual que en producción."
+      "desc": "Asados largos para amigos y familia. Lo que más importa es esperar el momento justo del fuego, igual que en producción."
     },
     {
       "name": "Melómano",
@@ -33,7 +32,7 @@
       "role": "Staff Android Engineer",
       "period": "2026 · 09 a hoy",
       "current": true,
-      "description": "Promovido desde Senior. Me cambié al squad Prisma, a cargo del PIN y el 2FA de la app."
+      "description": "Me promovieron desde Senior y pasé al squad Prisma, a cargo del PIN y el 2FA de la app."
     },
     {
       "company": "MACH",

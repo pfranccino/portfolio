@@ -12,10 +12,22 @@
         "preview": {
           "source": "Salida de ejemplo del README",
           "lines": [
-            { "type": "cmd", "text": "$ toml-deps-checker --calver-months 2" },
-            { "type": "err", "text": "🔴 androidx.compose:compose-bom      2026.04.01  2026.08.00" },
-            { "type": "warn", "text": "🟡 com.google.firebase:firebase-bom  34.10.0     34.18.0" },
-            { "type": "warn", "text": "🟡 com.squareup.okhttp3:okhttp       5.4.0       5.5.0" }
+            {
+              "type": "cmd",
+              "text": "$ toml-deps-checker --calver-months 2"
+            },
+            {
+              "type": "err",
+              "text": "🔴 androidx.compose:compose-bom      2026.04.01  2026.08.00"
+            },
+            {
+              "type": "warn",
+              "text": "🟡 com.google.firebase:firebase-bom  34.10.0     34.18.0"
+            },
+            {
+              "type": "warn",
+              "text": "🟡 com.squareup.okhttp3:okhttp       5.4.0       5.5.0"
+            }
           ]
         }
       },
@@ -26,20 +38,44 @@
         "description": "El segundo paso de toml-deps-checker. Toma su dependency_status.json y, por cada dependencia atrasada, junta las notas de versión oficiales (GitHub Releases, AndroidX, Firebase, Play services) de todas las versiones estables entre la tuya y la última.",
         "link": "https://github.com/pfranccino/deps-changelog-diff",
         "preview": {
-          "source": "changelog_diff.json de ejemplo del README",
+          "source": "changelog_diff.json de ejemplo del README (recortado)",
           "lines": [
-            { "type": "dim", "text": "{" },
-            { "type": "key", "text": "  \"com.squareup.okhttp3:okhttp\": {" },
-            { "type": "dim", "text": "    \"type\": \"maven\"," },
-            { "type": "warn", "text": "    \"from\": \"4.12.0\"," },
-            { "type": "ok", "text": "    \"to\": \"5.0.0\"," },
-            { "type": "dim", "text": "    \"source\": \"github\"," },
-            { "type": "dim", "text": "    \"source_url\": \"https://github.com/square/okhttp/releases\"," },
-            { "type": "dim", "text": "    \"versions\": [" },
-            { "type": "dim", "text": "      { \"version\": \"5.0.0\", \"date\": \"2025-07-02\", \"url\": \"...\", \"notes\": \"...\" }" },
-            { "type": "dim", "text": "    ]" },
-            { "type": "dim", "text": "  }" },
-            { "type": "dim", "text": "}" }
+            {
+              "type": "dim",
+              "text": "{"
+            },
+            {
+              "type": "key",
+              "text": "  \"com.squareup.okhttp3:okhttp\": {"
+            },
+            {
+              "type": "dim",
+              "text": "    \"type\": \"maven\","
+            },
+            {
+              "type": "warn",
+              "text": "    \"from\": \"4.12.0\","
+            },
+            {
+              "type": "ok",
+              "text": "    \"to\": \"5.0.0\","
+            },
+            {
+              "type": "dim",
+              "text": "    \"source\": \"github\","
+            },
+            {
+              "type": "dim",
+              "text": "    ..."
+            },
+            {
+              "type": "dim",
+              "text": "  }"
+            },
+            {
+              "type": "dim",
+              "text": "}"
+            }
           ]
         }
       }
@@ -56,21 +92,44 @@
         "description": "Lee los build.gradle de un proyecto Android multi-módulo y muestra cómo dependen los módulos entre sí. Genera diagramas Mermaid y PlantUML, mide la salud de la arquitectura y te dice qué se rompe si cambias un módulo.",
         "link": "https://github.com/pfranccino/android-gradle-analyzer",
         "preview": {
-          "source": "Salida de ejemplo del README",
+          "source": "Salida de ejemplo del README (recortada)",
           "lines": [
-            { "type": "cmd", "text": "$ gradle-analyzer tests/fixtures/leaf_coupling" },
-            { "type": "dim", "text": "📁 Scanning modules in: .../tests/fixtures/leaf_coupling" },
-            { "type": "ok", "text": "✓ 10 modules found" },
-            { "type": "blank" },
-            { "type": "dim", "text": "🔍 Analyzing dependencies (engine: static)..." },
-            { "type": "ok", "text": "  ✓ app: 3 dependency(ies)" },
-            { "type": "ok", "text": "  ✓ payments: 5 dependency(ies)" },
-            { "type": "dim", "text": "  ○ core: no internal dependencies" },
-            { "type": "dim", "text": "  ..." },
-            { "type": "ok", "text": "✓ Analysis complete: 15 dependencies detected" },
-            { "type": "blank" },
-            { "type": "key", "text": "✓ Mermaid:  diagrams/gradle-dependencies.mmd" },
-            { "type": "key", "text": "✓ Report:   diagrams/gradle-report.txt" }
+            {
+              "type": "cmd",
+              "text": "$ gradle-analyzer tests/fixtures/leaf_coupling"
+            },
+            {
+              "type": "dim",
+              "text": "📁 Scanning modules in: .../tests/fixtures/leaf_coupling"
+            },
+            {
+              "type": "ok",
+              "text": "✓ 10 modules found"
+            },
+            {
+              "type": "dim",
+              "text": "🔍 Analyzing dependencies (engine: static)..."
+            },
+            {
+              "type": "ok",
+              "text": "  ✓ app: 3 dependency(ies)"
+            },
+            {
+              "type": "ok",
+              "text": "  ✓ payments: 5 dependency(ies)"
+            },
+            {
+              "type": "dim",
+              "text": "  ..."
+            },
+            {
+              "type": "ok",
+              "text": "✓ Analysis complete: 15 dependencies detected"
+            },
+            {
+              "type": "key",
+              "text": "✓ Mermaid:  diagrams/gradle-dependencies.mmd"
+            }
           ]
         }
       },
@@ -78,18 +137,38 @@
         "id": "android-module-map",
         "title": "android-module-map",
         "kicker": "Python · CLI",
-        "description": "Mira adentro de un módulo Kotlin: agrupa las clases por capa, traza el camino del ViewModel a la API, mapea los bindings de Hilt y marca las dependencias prohibidas entre capas con archivo y línea. Sin compilar con Gradle y sin modelos de IA.",
+        "description": "Mira adentro de un módulo Kotlin: agrupa las clases por capa, traza el camino del ViewModel a la API, mapea los bindings de Hilt y marca las dependencias prohibidas entre capas con archivo y línea. Funciona sin compilar con Gradle y sin modelos de IA.",
         "link": "https://github.com/pfranccino/android-module-map",
         "preview": {
           "source": "Salida esperada del README",
           "lines": [
-            { "type": "cmd", "text": "$ module-map feature/login" },
-            { "type": "dim", "text": "[module_map +  0.0s] :feature:login: parsing 6 files..." },
-            { "type": "ok", "text": "[module_map +  0.1s] feature/login/docs/architecture/feature-login.module-map.json: 19 nodes, 5 externals, 29 edges, 0 warnings" },
-            { "type": "blank" },
-            { "type": "cmd", "text": "$ module-diagrams feature/login" },
-            { "type": "key", "text": "generated: feature/login/docs/architecture/feature-login.md" },
-            { "type": "key", "text": "generated: feature/login/docs/architecture/feature-login.html" }
+            {
+              "type": "cmd",
+              "text": "$ module-map feature/login"
+            },
+            {
+              "type": "dim",
+              "text": "[module_map +  0.0s] :feature:login: parsing 6 files..."
+            },
+            {
+              "type": "ok",
+              "text": "[module_map +  0.1s] feature/login/docs/architecture/feature-login.module-map.json: 19 nodes, 5 externals, 29 edges, 0 warnings"
+            },
+            {
+              "type": "blank"
+            },
+            {
+              "type": "cmd",
+              "text": "$ module-diagrams feature/login"
+            },
+            {
+              "type": "key",
+              "text": "generated: feature/login/docs/architecture/feature-login.md"
+            },
+            {
+              "type": "key",
+              "text": "generated: feature/login/docs/architecture/feature-login.html"
+            }
           ]
         }
       }

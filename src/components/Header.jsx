@@ -6,6 +6,7 @@ const NAV_LINKS = [
   { href: '#sobre', label: 'Sobre' },
   { href: '#stack', label: 'Stack' },
   { href: '#trabajo', label: 'Trabajo' },
+  { href: '#skills', label: 'Skills' },
   { href: '#experiencia', label: 'Experiencia' },
   { href: '#articulos', label: 'Artículos' },
 ];
@@ -99,13 +100,18 @@ const Header = () => {
           ))}
         </ul>
       </nav>
-      <a
-        href="mailto:paul.ayala023@gmail.com"
-        className={styles.drawerMail}
-        onClick={closeMenu}
-      >
-        paul.ayala023@gmail.com
-      </a>
+      <div className={styles.drawerEnd}>
+        <a
+          href="mailto:paul.ayala023@gmail.com"
+          className={styles.drawerMail}
+          onClick={closeMenu}
+        >
+          paul.ayala023@gmail.com
+        </a>
+        <button type="button" className={styles.theme} onClick={toggleTheme}>
+          {themeLabel}
+        </button>
+      </div>
     </div>
   );
 
@@ -132,7 +138,7 @@ const Header = () => {
           </nav>
 
           <div className={styles.end}>
-            <button type="button" className={styles.theme} onClick={toggleTheme}>
+            <button type="button" className={`${styles.theme} ${styles.themeDesktop}`} onClick={toggleTheme}>
               {themeLabel}
             </button>
 
@@ -141,11 +147,11 @@ const Header = () => {
               type="button"
               className={`${styles.burger} ${menuOpen ? styles.burgerOpen : ''}`}
               onClick={() => setMenuOpen((o) => !o)}
-              aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"
             >
-              <span /><span /><span />
+              {menuOpen ? 'Cerrar' : 'Menú'}
+              <span className={styles.bars} aria-hidden="true"><span /><span /><span /></span>
             </button>
           </div>
         </div>

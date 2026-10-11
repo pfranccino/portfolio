@@ -1,14 +1,14 @@
 [
   {
     "title": "Vibecoding: curiosidad, control y el miedo a soltar el teclado",
-    "excerpt": "La intersección entre la intuición humana y la generación de código con IA. Lo que estoy aprendiendo a entregar y lo que aún me cuesta soltar.",
+    "excerpt": "Entré con curiosidad y desconfianza. Me sorprendió cuánto contexto entendía la herramienta, y sin darme cuenta pasé de escribir código a supervisarlo.",
     "link": "https://pfranccino.medium.com/vibecoding-curiosidad-control-y-el-miedo-a-soltar-el-teclado-9f30a27a10a2",
     "date": "2026-01-14",
     "category": "IA y código"
   },
   {
     "title": "La misión y el barro",
-    "excerpt": "Cómo se empieza realmente un proyecto grande: los stakeholders, los compromisos imposibles, y por qué la parte técnica suele ser la menos difícil.",
+    "excerpt": "Las horas de refinamiento antes de escribir una línea de código, y cómo nació el orquestador que decide qué módulo levantar según el estado del usuario.",
     "link": "https://pfranccino.medium.com/construyendo-la-tarjeta-de-cr%C3%A9dito-machbank-parte-1-la-misi%C3%B3n-y-el-barro-13699dc51d78",
     "date": "2025-12-17",
     "series": "Construyendo la tarjeta de crédito MACHBANK",
@@ -16,7 +16,7 @@
   },
   {
     "title": "Arquitectura pura y el mito del lobo",
-    "excerpt": "Por qué las decisiones de arquitectura impactan más en mantenimiento que en velocidad inicial. Lo que defendí, lo que cedí, y lo que cambiaría hoy.",
+    "excerpt": "La arquitectura salió de un equipo entero: Android, líderes técnicos y Plataforma. Pasamos de muchos contratos entre módulos a uno solo que levanta toda la tarjeta.",
     "link": "https://pfranccino.medium.com/construyendo-la-tarjeta-de-cr%C3%A9dito-machbank-parte-2-arquitectura-pura-y-el-mito-del-lobo-0ceb26bcde23",
     "date": "2025-12-19",
     "series": "Construyendo la tarjeta de crédito MACHBANK",
@@ -24,7 +24,7 @@
   },
   {
     "title": "La guerra de los píxeles y el cambio de mentalidad",
-    "excerpt": "El día que entendí que UI/UX era parte del producto y no otra disciplina. La colaboración con diseño que terminó cambiando mi forma de escribir Compose.",
+    "excerpt": "Empezamos mezclando Fragmentos con Compose y fue un error. Migrar a Compose puro me obligó a pensar la UI como consecuencia del estado.",
     "link": "https://pfranccino.medium.com/construyendo-la-tarjeta-de-cr%C3%A9dito-machbank-parte-3-la-guerra-de-los-p%C3%ADxeles-y-el-cambio-de-e5c78708340d",
     "date": "2026-01-06",
     "series": "Construyendo la tarjeta de crédito MACHBANK",

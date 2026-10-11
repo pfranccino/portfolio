@@ -1,0 +1,26 @@
+[
+  {
+    "id": "android-gradle-health",
+    "name": "android-gradle-health",
+    "repo": "pfranccino-dev-skills",
+    "link": "https://github.com/pfranccino/pfranccino-dev-skills",
+    "description": "Corre android-gradle-analyzer sobre un proyecto Android multi-módulo, lee su salida JSON y te entrega el diagnóstico: grafo de dependencias, ciclos, violaciones de SDP, métricas Ca/Ce/I, health score y lógica compartida en el módulo equivocado.",
+    "trigger": "Se activa cuando le preguntas a Claude por dependencias de Gradle, ciclos entre módulos o la salud de la arquitectura.",
+    "install": {
+      "source": "Instalación del README, desde un clon del repo",
+      "command": "cp -r skills/android-gradle-health ~/.claude/skills/"
+    }
+  },
+  {
+    "id": "module-map",
+    "name": "module-map",
+    "repo": "android-module-map",
+    "link": "https://github.com/pfranccino/android-module-map",
+    "description": "Corre los dos scripts de android-module-map y documenta un módulo con cinco diagramas Mermaid: capas, flujos desde los ViewModels, secuencia de un flujo, dependencias entre módulos e inyección con Hilt. Después revisa contra el código las relaciones dudosas y describe las clases que no tienen KDoc.",
+    "trigger": "Se activa cuando le pides a Claude diagramar, mapear o documentar la arquitectura de un módulo Kotlin.",
+    "install": {
+      "source": "Instalación del README",
+      "command": "git clone https://github.com/pfranccino/android-module-map.git .claude/skills/module-map"
+    }
+  }
+]

@@ -1,5 +1,8 @@
 import styles from './Hero.module.css';
 
+// Each word is a brick that drops into place; the order sets the stagger
+const ROLE = ['Staff', 'Android', 'Engineer.'];
+
 const Hero = () => {
   return (
     <section className={styles.hero} id="hero">
@@ -11,7 +14,17 @@ const Hero = () => {
 
           <h1 className={styles.h1}>
             <span className={styles.role}>
-              <span className="mark">Staff</span> Android Engineer.
+              {ROLE.map((word, i) => (
+                <span key={word}>
+                  {i > 0 && ' '}
+                  <span
+                    className={`${styles.brick} ${i === 0 ? styles.staff : ''}`}
+                    style={{ '--i': i }}
+                  >
+                    {word}
+                  </span>
+                </span>
+              ))}
             </span>
             <span className={styles.since}>Construyendo con Kotlin desde 2019.</span>
           </h1>
@@ -39,7 +52,7 @@ const Hero = () => {
             alt="Paul Franccino Ayala, Staff Android Engineer"
             width={840}
             height={1025}
-            fetchpriority="high"
+            fetchPriority="high"
           />
           <figcaption className={styles.cap}>@pfranccino</figcaption>
         </figure>

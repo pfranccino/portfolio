@@ -15,9 +15,8 @@ const Contacto = () => {
         <div>
           <h2 className={styles.heading}>Conversemos. Mejor por mail.</h2>
           <p className={styles.lead}>
-            Si tienes un proyecto Android complejo, un dolor de cabeza con Gradle,
-            o solo quieres comparar notas sobre arquitectura, escríbeme.
-            Suelo contestar dentro de 48 hrs.
+            Si tienes un dolor de cabeza con Gradle o quieres comparar notas sobre
+            arquitectura Android, escríbeme. Suelo contestar dentro de 48 hrs.
           </p>
           <a href="mailto:paul.ayala023@gmail.com" className={styles.mail}>
             paul.ayala023@gmail.com

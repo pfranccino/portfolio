@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Sobre from './components/Sobre';
 import Stack from './components/Stack';
 import Trabajo from './components/Trabajo';
+import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Articulos from './components/Articulos';
 import Contacto from './components/Contacto';
@@ -38,6 +39,7 @@ function App() {
         <Sobre />
         <Stack />
         <Trabajo />
+        <Skills />
         <Experience />
         <Articulos />
         <Contacto />
