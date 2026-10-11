@@ -1,125 +1,109 @@
+/* The one full yellow block on the page, in both themes: the ending is where the reader acts */
 .contacto {
-  padding: 7rem 0 8rem 0;
-  background: var(--inv-bg);
-  color: var(--inv-ink);
-  border-top: 1px solid var(--inv-bg);
-}
-
-.secNum {
-  font-family: var(--font-m);
-  font-size: .8rem;
-  letter-spacing: .02em;
-  color: var(--inv-ink-3);
-}
-
-.contacto :focus-visible {
-  outline-color: var(--inv-ink);
-}
-
-.contacto :global(.sec-head) {
-  margin-bottom: 3rem;
+  --focus: var(--on-accent);
+  background: var(--accent);
+  color: var(--on-accent);
+  padding: 7rem 0;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
   gap: 5rem;
-  align-items: start;
+  align-items: end;
 }
 
 .heading {
-  font-family: var(--font-h);
-  font-weight: 400;
-  font-size: clamp(3rem, 6vw, 5rem);
-  line-height: .95;
+  font-family: var(--font-d);
+  font-stretch: 122%;
+  font-weight: 800;
+  font-size: clamp(2.3rem, 5vw, 4.2rem);
+  line-height: 1.02;
   letter-spacing: -.03em;
-  margin-bottom: 1.5rem;
-  color: var(--inv-ink);
-}
-
-.heading em {
-  font-style: italic;
-  color: var(--inv-ink-2);
+  max-width: 14ch;
+  margin-bottom: 1.75rem;
 }
 
 .lead {
-  font-family: var(--font-b);
+  color: var(--on-accent-2);
   font-size: 1.1rem;
-  color: var(--inv-ink-2);
-  max-width: 48ch;
-  margin-bottom: 2rem;
-  line-height: 1.55;
+  max-width: 50ch;
+  margin-bottom: 2.25rem;
 }
 
-.mailPill {
+.mail {
   display: inline-flex;
   align-items: center;
-  gap: .7rem;
-  font-family: var(--font-h);
+  min-height: 52px;
+  padding: .85rem 1.4rem;
+  border-radius: var(--radius);
+  background: var(--on-accent);
+  color: var(--accent);
+  font-family: var(--font-m);
   font-weight: 600;
-  font-size: 1.3rem;
-  color: var(--bg);
-  padding: 1.1rem 2rem;
-  background: var(--accent);
-  border: 1px solid var(--accent);
-  border-radius: var(--radius-pill);
-  overflow-wrap: anywhere;
-  transition: transform .2s, box-shadow .2s;
+  font-size: 1.05rem;
+  transition: transform .15s ease;
 }
 
-.mailPill:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 24px color-mix(in oklch, var(--accent) 40%, transparent);
+.mail:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.mail:active {
+  transform: translateY(1px);
 }
 
 .channels {
-  display: flex;
-  flex-direction: column;
-  border-top: 1px solid var(--inv-rule);
+  list-style: none;
+  border-top: 2px solid var(--on-accent);
 }
 
 .channel {
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 1.25rem;
-  padding: 1.2rem 0;
-  border-bottom: 1px solid var(--inv-rule);
+  grid-template-columns: 6.5rem minmax(0, 1fr) auto;
+  gap: 1rem;
   align-items: center;
-  transition: opacity .2s;
-}
-
-.channel:hover {
-  opacity: .8;
+  min-height: 56px;
+  padding: .5rem 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--on-accent) 30%, transparent);
 }
 
 .chLabel {
-  font-family: var(--font-m);
-  font-size: .78rem;
-  color: var(--inv-ink-3);
+  font-family: var(--font-d);
+  font-stretch: 110%;
+  font-weight: 700;
 }
 
 .chHandle {
-  font-family: var(--font-h);
-  font-weight: 500;
-  color: var(--inv-ink);
+  font-family: var(--font-m);
+  font-size: .88rem;
+  color: var(--on-accent-2);
 }
 
 .chExt {
-  font-family: var(--font-m);
-  font-size: .74rem;
-  color: var(--inv-ink-2);
-  transition: color .2s;
+  transition: transform .2s ease;
+}
+
+.channel:hover .chLabel {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .channel:hover .chExt {
-  color: var(--inv-ink);
+  transform: translate(2px, -2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mail, .chExt { transition: none; }
+  .mail:active, .channel:hover .chExt { transform: none; }
 }
 
 @media (max-width: 880px) {
-  .grid { grid-template-columns: 1fr; gap: 3rem; }
-  .contacto { padding: 5rem 0 6rem 0; }
+  .grid { grid-template-columns: 1fr; gap: 3.5rem; }
 }
 
-@media (max-width: 520px) {
-  .mailPill { font-size: 1.05rem; padding: 1rem 1.4rem; }
+@media (max-width: 760px) {
+  .contacto { padding: 4.5rem 0; }
+  .mail { font-size: .92rem; }
 }

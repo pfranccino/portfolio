@@ -1,16 +1,13 @@
 .footer {
-  padding: 2.5rem 0;
-  background: var(--inv-bg);
-  color: var(--inv-ink-3);
+  padding: 2rem 0;
   font-family: var(--font-m);
-  font-size: .74rem;
-  letter-spacing: .04em;
-  border-top: 1px solid var(--inv-rule);
+  font-size: .82rem;
+  color: var(--ink-2);
 }
 
 .row {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: .5rem 2rem;
 }

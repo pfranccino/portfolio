@@ -1,11 +1,18 @@
 .hero {
-  padding: 9rem 0 5rem 0;
+  padding: calc(var(--header-h) + 4.5rem) 0 6rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 380px);
+  gap: 4rem;
+  align-items: end;
 }
 
 /* The dot marks a real state (open to conversations), so it stays static: no pulse, no glow */
 .eyebrow {
   font-family: var(--font-m);
-  font-size: .82rem;
+  font-size: .85rem;
   color: var(--ink-2);
   display: inline-flex;
   align-items: center;
@@ -23,139 +30,103 @@
 }
 
 .h1 {
-  font-family: var(--font-h);
-  font-weight: 500;
-  font-size: clamp(3rem, 7.5vw, 6.6rem);
-  line-height: .95;
-  letter-spacing: -.035em;
-  max-width: 18ch;
+  font-family: var(--font-d);
   margin-bottom: 2rem;
 }
 
-.accent {
-  color: var(--accent);
-  font-weight: 600;
+.role {
+  display: block;
+  font-stretch: 122%;
+  font-weight: 800;
+  font-size: clamp(2.6rem, 6.4vw, 5.4rem);
+  line-height: 1.02;
+  letter-spacing: -.03em;
 }
 
-.muted {
-  color: var(--ink-3);
+.since {
+  display: block;
+  margin-top: .9rem;
+  font-stretch: 100%;
   font-weight: 400;
+  font-size: clamp(1.4rem, 2.6vw, 2.1rem);
+  line-height: 1.2;
+  letter-spacing: -.01em;
+  color: var(--ink-2);
 }
 
 .lede {
-  font-family: var(--font-b);
   font-size: 1.15rem;
-  line-height: 1.55;
   color: var(--ink-2);
-  max-width: 54ch;
+  max-width: 48ch;
   margin-bottom: 2.5rem;
-}
-
-.lede strong {
-  color: var(--ink);
-  font-weight: 600;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .5rem;
-  margin-bottom: 3rem;
 }
 
 .ctas {
   display: flex;
-  gap: .8rem;
+  gap: 1.75rem;
   align-items: center;
-  margin-bottom: 4rem;
   flex-wrap: wrap;
 }
 
-.metaRow {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 3rem;
-  align-items: end;
-  border-top: 1px solid var(--rule);
-  padding-top: 2rem;
-}
-
-.stats {
-  display: flex;
-  gap: 3rem;
-}
-
-.statV {
-  font-family: var(--font-h);
-  font-weight: 500;
-  font-size: 2.4rem;
-  line-height: 1;
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 600;
   color: var(--ink);
-  letter-spacing: -.02em;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
 }
 
-.statL {
-  font-family: var(--font-b);
-  font-size: .85rem;
-  color: var(--ink-2);
-  margin-top: .45rem;
+.secondary:hover {
+  text-decoration-color: var(--ink);
 }
 
-.signature {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: .6rem;
-}
-
-.stamp {
+.portrait {
   position: relative;
-  width: 120px;
-  height: 150px;
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: var(--rule);
 }
 
-.stamp img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.portrait img {
   display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 840 / 1025;
+  object-fit: cover;
+  border-radius: var(--radius);
+  background: var(--bg-2);
 }
 
-.stamp::after {
+/* Yellow bar under the photo ties it to the H1 mark without overlaying anything on the face */
+.portrait::after {
   content: "";
-  position: absolute;
-  inset: 0;
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ink) 8%, transparent);
-  border-radius: inherit;
-  pointer-events: none;
+  display: block;
+  height: 6px;
+  margin-top: .75rem;
+  width: 38%;
+  background: var(--accent);
 }
 
 .cap {
+  position: absolute;
+  right: 0;
+  bottom: -.35rem;
   font-family: var(--font-m);
-  font-size: .72rem;
-  letter-spacing: .02em;
+  font-size: .8rem;
   color: var(--ink-2);
-  text-align: right;
-  line-height: 1.5;
 }
 
-.cap b {
-  color: var(--ink);
-  font-weight: 600;
+@media (max-width: 880px) {
+  .grid { gap: 2.5rem; grid-template-columns: minmax(0, 1fr) 220px; }
 }
 
 @media (max-width: 760px) {
-  .hero { padding: 7rem 0 4rem 0; }
-  .h1 { font-size: clamp(2.6rem, 11vw, 4rem); max-width: none; }
-  .lede { font-size: 1.02rem; }
-  .metaRow { grid-template-columns: 1fr; gap: 2rem; }
-  .stats { gap: 1.8rem; flex-wrap: wrap; }
-  .statV { font-size: 1.8rem; }
-  .signature { flex-direction: row; align-items: center; gap: 1rem; }
-  .stamp { width: 88px; height: 110px; }
-  .cap { text-align: left; }
-  .ctas { margin-bottom: 3rem; }
+  .hero { padding: calc(var(--header-h) + 2.5rem) 0 4.5rem; }
+  .grid { grid-template-columns: 1fr; }
+  .portrait { order: -1; width: 40%; max-width: 180px; }
+  .portrait::after { width: 60%; }
+  .cap { position: static; display: block; margin-top: .4rem; }
+  .eyebrow { margin-bottom: 1.25rem; }
+  .lede { font-size: 1.05rem; }
 }
