@@ -10,7 +10,7 @@
   border-top: 1px solid var(--rule);
 }
 
-/* The current role is the only one with the yellow rule: the timeline starts at the present */
+/* Yellow rule marks the current role, and only that one */
 .current {
   border-top: 4px solid var(--accent);
 }

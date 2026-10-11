@@ -98,23 +98,74 @@
   background: var(--bg-2);
 }
 
-/* Yellow bar under the photo ties it to the H1 mark without overlaying anything on the face */
-.portrait::after {
-  content: "";
-  display: block;
-  height: 6px;
-  margin-top: .75rem;
-  width: 38%;
-  background: var(--accent);
-}
-
 .cap {
-  position: absolute;
-  right: 0;
-  bottom: -.35rem;
+  margin-top: .6rem;
   font-family: var(--font-m);
   font-size: .8rem;
   color: var(--ink-2);
+  text-align: right;
+}
+
+.brick {
+  display: inline-block;
+}
+
+/* The yellow block behind "Staff" is the one accent move in running text */
+.staff {
+  position: relative;
+  isolation: isolate;
+  padding: 0 .12em;
+  color: var(--on-accent);
+}
+
+.staff::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--accent);
+  transform-origin: left;
+}
+
+/* Runs once on load: the words drop like Lego bricks, then the yellow block snaps in behind "Staff" */
+@media (prefers-reduced-motion: no-preference) {
+  .brick {
+    animation: drop .5s cubic-bezier(.2, .9, .3, 1.3) both;
+    animation-delay: calc(var(--i) * 90ms);
+  }
+
+  .staff {
+    animation: drop .5s cubic-bezier(.2, .9, .3, 1.3) both, inkSwap .2s linear .42s both;
+  }
+
+  .staff::before {
+    animation: lay .35s cubic-bezier(.3, 1.35, .5, 1) .45s both;
+  }
+
+  .since {
+    animation: rise .45s ease-out .7s both;
+  }
+}
+
+@keyframes drop {
+  from { transform: translateY(-.55em); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+
+/* In dark mode ink is light, so "Staff" turns dark only once the yellow is behind it */
+@keyframes inkSwap {
+  from { color: var(--ink); }
+  to { color: var(--on-accent); }
+}
+
+@keyframes lay {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes rise {
+  from { transform: translateY(.4em); opacity: 0; }
+  to { transform: none; opacity: 1; }
 }
 
 @media (max-width: 880px) {
@@ -125,8 +176,7 @@
   .hero { padding: calc(var(--header-h) + 2.5rem) 0 4.5rem; }
   .grid { grid-template-columns: 1fr; }
   .portrait { order: -1; width: 40%; max-width: 180px; }
-  .portrait::after { width: 60%; }
-  .cap { position: static; display: block; margin-top: .4rem; }
+  .cap { text-align: left; margin-top: .4rem; }
   .eyebrow { margin-bottom: 1.25rem; }
   .lede { font-size: 1.05rem; }
 }

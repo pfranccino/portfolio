@@ -125,7 +125,7 @@ a {
   border-top: 1px solid var(--rule);
 }
 
-/* Wide cut of Archivo for display: reads as engineering drawing, not as a template */
+/* Wide cut of Archivo for display: reads like an engineering drawing */
 .sec-title {
   font-family: var(--font-d);
   font-stretch: 118%;
@@ -150,15 +150,6 @@ a {
 @media (max-width: 760px) {
   .sec { padding: 4.5rem 0; }
   .sec-head { margin-bottom: 2.5rem; }
-}
-
-/* Yellow block behind a word: the one accent move, used on the H1 and nowhere else in running text */
-.mark {
-  background: var(--accent);
-  color: var(--on-accent);
-  padding: 0 .12em;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
 }
 
 .btn {
@@ -200,7 +191,7 @@ a {
   color: var(--ink-2);
 }
 
-/* One scroll-entrance fade per section: tells the reader a new block started, nothing more */
+/* One scroll-entrance fade per section, to mark where a new block starts */
 .sec {
   opacity: 0;
   transform: translateY(20px);

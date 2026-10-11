@@ -1,4 +1,4 @@
-/* The one full yellow block on the page, in both themes: the ending is where the reader acts */
+/* The only full yellow block, in both themes: it marks the one action the page asks for */
 .contacto {
   --focus: var(--on-accent);
   background: var(--accent);

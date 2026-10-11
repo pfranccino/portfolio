@@ -1,5 +1,4 @@
 import groups from '../data/projects.json';
-import profile from '../data/profile.json';
 import styles from './Trabajo.module.css';
 
 const Preview = ({ preview }) => (
@@ -58,18 +57,6 @@ const Trabajo = () => {
             </div>
           </div>
         ))}
-
-        <p className={styles.note}>
-          android-gradle-analyzer también viene como skill para Claude Code en{' '}
-          <a
-            href={profile.social.skills}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="pfranccino-dev-skills en GitHub (se abre en otra pestaña)"
-          >
-            pfranccino-dev-skills <span aria-hidden="true">↗</span>
-          </a>
-        </p>
       </div>
     </section>
   );
