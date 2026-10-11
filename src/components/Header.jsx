@@ -25,12 +25,15 @@ const Header = () => {
   const [theme, setTheme] = useState(currentTheme);
   const burgerRef = useRef(null);
   const firstLinkRef = useRef(null);
+  const sentinelRef = useRef(null);
 
+  // A 1px sentinel 24px down the page: once it leaves the viewport the header gets its rule
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-    return () => window.removeEventListener('scroll', onScroll);
+    const el = sentinelRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(([e]) => setScrolled(!e.isIntersecting));
+    observer.observe(el);
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -108,9 +111,13 @@ const Header = () => {
 
   return (
     <>
+      <div ref={sentinelRef} className={styles.sentinel} aria-hidden="true" />
       <header className={`${styles.header} ${scrolled || menuOpen ? styles.scrolled : ''}`}>
         <div className={`wrap ${styles.row}`}>
-          <a className={styles.brand} href="#hero" onClick={closeMenu}>Paul Franccino</a>
+          <a className={styles.brand} href="#hero" onClick={closeMenu}>
+            <span className={styles.brandMark} aria-hidden="true">P</span>
+            Paul Franccino
+          </a>
 
           <nav className={styles.nav} aria-label="Principal">
             <ul>
@@ -125,10 +132,6 @@ const Header = () => {
           </nav>
 
           <div className={styles.end}>
-            <a href="mailto:paul.ayala023@gmail.com" className={styles.mail}>
-              paul.ayala023@gmail.com
-            </a>
-
             <button type="button" className={styles.theme} onClick={toggleTheme}>
               {themeLabel}
             </button>

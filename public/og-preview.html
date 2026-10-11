@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;500&display=swap">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -15,14 +15,14 @@
 
     /* Same tokens as the site's light theme (src/index.css) */
     body {
-      background: #DCE4D3;
-      color: #14201A;
-      font-family: 'Outfit', sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 24px;
-      padding: 76px 90px;
+      background: #EDEFF0;
+      color: #15181B;
+      font-family: 'Archivo', sans-serif;
+      display: grid;
+      grid-template-columns: 1fr 330px;
+      gap: 64px;
+      align-items: center;
+      padding: 72px 90px 110px;
       position: relative;
     }
 
@@ -31,58 +31,80 @@
       align-items: center;
       gap: 10px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 16px;
-      color: #3A4A40;
+      font-size: 18px;
+      color: #3F454B;
+      margin-bottom: 28px;
     }
 
     .dot {
-      width: 9px;
-      height: 9px;
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
-      background: #2E7D46;
-    }
-
-    .name {
-      font-size: 96px;
-      font-weight: 500;
-      letter-spacing: -.035em;
-      line-height: .95;
+      background: #1F7A45;
     }
 
     .role {
+      font-stretch: 122%;
+      font-weight: 800;
+      font-size: 84px;
+      line-height: 1.02;
+      letter-spacing: -.03em;
+    }
+
+    .mark {
+      background: #F2C230;
+      padding: 0 .12em;
+    }
+
+    .name {
+      margin-top: 24px;
       font-size: 34px;
-      font-weight: 400;
-      color: #4E5E55;
+      color: #3F454B;
       letter-spacing: -.01em;
     }
 
-    .role b {
-      color: #A63B15;
-      font-weight: 600;
+    .photo img {
+      display: block;
+      width: 330px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 2px;
+    }
+
+    .photo::after {
+      content: "";
+      display: block;
+      width: 40%;
+      height: 8px;
+      margin-top: 12px;
+      background: #F2C230;
     }
 
     .foot {
       position: absolute;
       left: 90px;
       right: 90px;
-      bottom: 56px;
+      bottom: 44px;
       display: flex;
       justify-content: space-between;
-      border-top: 1px solid #B4C2A8;
-      padding-top: 20px;
+      border-top: 2px solid #15181B;
+      padding-top: 18px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 16px;
-      color: #3A4A40;
+      font-size: 18px;
+      color: #3F454B;
     }
   </style>
 </head>
 <body>
-  <div class="eyebrow"><span class="dot"></span>Disponible para conversar · Santiago, Chile</div>
-  <div class="name">Paul Franccino</div>
-  <div class="role"><b>Android Senior.</b> Construyendo con Kotlin desde 2019.</div>
+  <div>
+    <div class="eyebrow"><span class="dot"></span>Disponible para conversar · Santiago, Chile</div>
+    <div class="role"><span class="mark">Staff</span> Android Engineer.</div>
+    <div class="name">Paul Franccino. Construyendo con Kotlin desde 2019.</div>
+  </div>
+  <div class="photo"><img src="img/profile.webp" alt=""></div>
 
   <div class="foot">
-    <span>Kotlin · Jetpack Compose · MVI</span>
+    <span>Kotlin · Gradle · Arquitectura modular</span>
     <span>pfranccino.dev</span>
   </div>
 </body>

@@ -1,4 +1,5 @@
-import projects from '../data/projects.json';
+import groups from '../data/projects.json';
+import profile from '../data/profile.json';
 import styles from './Trabajo.module.css';
 
 const Preview = ({ preview }) => (
@@ -22,44 +23,53 @@ const Trabajo = () => {
     <section className="sec" id="trabajo">
       <div className="wrap">
         <div className="sec-head">
-          <div className="sec-num">03 / Trabajo</div>
-          <div>
-            <h2 className="sec-title">
-              Lo que <span className="muted">puedo mostrar.</span>
-            </h2>
-            <p className="sec-lede">
-              Mis apps de trabajo son privadas, pero las herramientas que construyo para mí
-              están abiertas. Nacieron para resolver problemas de mi propio día a día.
-            </p>
-          </div>
+          <h2 className="sec-title">Lo que puedo mostrar.</h2>
+          <p className="sec-lede">
+            Mis apps de trabajo son privadas, pero las herramientas que construyo están
+            abiertas. Son dos pares: uno para las dependencias y otro para la arquitectura.
+          </p>
         </div>
 
-        <div className={styles.grid}>
-          {projects.map((project) => (
-            <article key={project.id} className={styles.work}>
-              <div className={styles.text}>
-                <div className={styles.kicker}>{project.kicker}</div>
-                <h3 className={styles.title}>{project.title}</h3>
-                <p className={styles.desc}>{project.description}</p>
-                <div className={styles.tags}>
-                  {project.tags.map((tag) => (
-                    <span key={tag} className={styles.tag}>{tag}</span>
-                  ))}
-                </div>
-                <a
-                  className={styles.link}
-                  href={project.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`Ver ${project.title} en GitHub (se abre en otra pestaña)`}
-                >
-                  Ver en GitHub <span className={styles.arr} aria-hidden="true">↗</span>
-                </a>
-              </div>
-              <Preview preview={project.preview} />
-            </article>
-          ))}
-        </div>
+        {groups.map((group) => (
+          <div key={group.group} className={styles.group}>
+            <div className={styles.groupHead}>
+              <h3 className={styles.groupName}>{group.group}</h3>
+              <p className={styles.question}>{group.question}</p>
+            </div>
+
+            <div className={styles.pair}>
+              {group.projects.map((project) => (
+                <article key={project.id} className={styles.work}>
+                  <div className={styles.kicker}>{project.kicker}</div>
+                  <h4 className={styles.title}>{project.title}</h4>
+                  <p className={styles.desc}>{project.description}</p>
+                  <a
+                    className={styles.link}
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Ver ${project.title} en GitHub (se abre en otra pestaña)`}
+                  >
+                    Ver en GitHub <span className={styles.arr} aria-hidden="true">↗</span>
+                  </a>
+                  <Preview preview={project.preview} />
+                </article>
+              ))}
+            </div>
+          </div>
+        ))}
+
+        <p className={styles.note}>
+          android-gradle-analyzer también viene como skill para Claude Code en{' '}
+          <a
+            href={profile.social.skills}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="pfranccino-dev-skills en GitHub (se abre en otra pestaña)"
+          >
+            pfranccino-dev-skills <span aria-hidden="true">↗</span>
+          </a>
+        </p>
       </div>
     </section>
   );
