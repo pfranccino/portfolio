@@ -49,7 +49,7 @@ Where yellow goes: the block behind "Staff" in the H1, the header/favicon "P" bl
 
 ## Content rules (owner decisions)
 
-- Title: **Staff Android Engineer** at MACH since 2026 · 09, in squad Prisma (owns the app's PIN and 2FA). Senior there 2021 · 08 a 2026 · 08; Onboarding and Recuperación de Cuenta belong to that era, not to Staff.
+- Title: **Staff Android Engineer** at MACH since 2026 · 09, in squad Prisma (owns the app's PIN and 2FA). Joined MACH as Junior in 2021 · 08; the 2021 · 08 a 2026 · 08 row is plain "Desarrollador Android" (Paul wants it general: Junior to Staff, no intermediate levels or dates). Onboarding and Recuperación de Cuenta belong to that era, not to Staff.
 - H1: "Staff Android Engineer. / Construyendo con Kotlin desde 2019." with "Staff" on the yellow block (`.staff` in `Hero.module.css`).
 - The large portrait lives in the hero (right column, LCP, preloaded in `index.html`). Sobre has no photo.
 - Eyebrow: plain line "Disponible para conversar · Santiago, Chile" with a static green dot. The dot marks a real state, so it stays; it never pulses or glows.
