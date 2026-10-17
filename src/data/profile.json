@@ -32,14 +32,14 @@
       "role": "Staff Android Engineer",
       "period": "2026 · 09 a hoy",
       "current": true,
-      "description": "Me promovieron desde Senior y pasé al squad Prisma, a cargo del PIN y el 2FA de la app."
+      "description": "Me promovieron a Staff y pasé al squad Prisma, a cargo del PIN y el 2FA de la app."
     },
     {
       "company": "MACH",
-      "role": "Desarrollador Android Senior",
+      "role": "Desarrollador Android",
       "period": "2021 · 08 a 2026 · 08",
       "current": false,
-      "description": "Desarrollo y mantenimiento de aplicación financiera Android con base de usuarios masiva. Migración de Onboarding y Recuperación de Cuenta. Implementación de arquitectura modular y patrones MVVM / MVI."
+      "description": "Entré como Junior. Desarrollo y mantenimiento de aplicación financiera Android con base de usuarios masiva. Migración de Onboarding y Recuperación de Cuenta. Implementación de arquitectura modular y patrones MVVM / MVI."
     },
     {
       "company": "Trust Technologies",

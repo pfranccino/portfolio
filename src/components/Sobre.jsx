@@ -19,7 +19,7 @@ const Sobre = () => {
         <div className={styles.grid}>
           <div className={styles.bio}>
             <p className={styles.bioFirst}>
-              Hago apps Android desde 2019. Llegué a MACH en 2021 como Senior y desde
+              Hago apps Android desde 2019. Llegué a MACH en 2021 como Junior y desde
               septiembre de 2026 soy Staff Android Engineer en el squad Prisma, a cargo
               del PIN y el 2FA de la app.
             </p>
