@@ -43,7 +43,9 @@ Where yellow goes: the block behind "Staff" in the H1, the header/favicon "P" bl
 
 **Layout**: sections use `.wrap` (max-width 1280px) and `.sec`. Section heads are a single plain `.sec-title` (wide Archivo), optionally followed by a stacked `.sec-lede`. No section numbers, no eyebrows above section titles (the hero eyebrow is the only one). Each section uses a different layout family: split hero, bio + stat column, 4-col spec grid, paired tools with subgrid-aligned previews, skill rows with their install command, dated role rows, featured + series + older articles, yellow contact block.
 
-**Motion** (MOTION 2): the H1 plays once on load (the three words drop like Lego bricks, then the yellow block snaps in behind "Staff"; purpose: put the eye on the news), one scroll-entrance fade per section, hover underline color changes, 1px press on buttons, small arrow nudge on external links. No infinite animations, no pulsing, no marquee, no scroll listeners (the header uses an IntersectionObserver sentinel). Everything respects `prefers-reduced-motion`.
+**Logo**: the yellow block with a P drawn as an SVG path (`Header.jsx`, favicon in `index.html`), never a font glyph, so the header and the tab show the same mark.
+
+**Motion** (MOTION 2): the H1 plays once on load (the three words drop like Lego bricks, then the yellow block snaps in behind "Staff"; purpose: put the eye on the news), the header logo lands once on load with the same brick language ("Encaja": falls, squashes, settles), one scroll-entrance fade per section, hover underline color changes, 1px press on buttons, small arrow nudge on external links. No infinite animations, no pulsing, no marquee, no scroll listeners (the header uses an IntersectionObserver sentinel). Everything respects `prefers-reduced-motion`.
 
 **Theme**: follows the OS by default; the header button ("Modo oscuro" / "Modo claro") overrides it, stored in `localStorage.theme`, applied before paint by the inline script in `index.html`. Contacto stays yellow in both themes on purpose.
 
