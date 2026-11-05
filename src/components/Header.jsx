@@ -121,7 +121,11 @@ const Header = () => {
       <header className={`${styles.header} ${scrolled || menuOpen ? styles.scrolled : ''}`}>
         <div className={`wrap ${styles.row}`}>
           <a className={styles.brand} href="#hero" onClick={closeMenu}>
-            <span className={styles.brandMark} aria-hidden="true">P</span>
+            <span className={styles.brandMark} aria-hidden="true">
+              <svg viewBox="0 0 100 100" focusable="false">
+                <path fillRule="evenodd" d="M24 20H56C68.7 20 77 28.4 77 40.5C77 52.6 68.7 61 56 61H43V80H24ZM43 35V46H54C58 46 60 44 60 40.5C60 37 58 35 54 35Z" />
+              </svg>
+            </span>
             Paul Franccino
           </a>
 
