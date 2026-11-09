@@ -5,6 +5,7 @@ const channels = [
   { label: 'LinkedIn', handle: 'in/paul-franccino-ayala', href: profile.social.linkedin },
   { label: 'GitHub', handle: '@pfranccino', href: profile.social.github },
   { label: 'Medium', handle: '@pfranccino', href: profile.social.medium },
+  { label: 'Instagram', handle: '@pfranccinodev', href: profile.social.instagram },
   { label: 'Spotify', handle: 'Playlist Mood', href: profile.social.spotify },
 ];
 
@@ -14,10 +15,6 @@ const Contacto = () => {
       <div className={`wrap ${styles.grid}`}>
         <div>
           <h2 className={styles.heading}>Conversemos. Mejor por mail.</h2>
-          <p className={styles.lead}>
-            Si tienes un dolor de cabeza con Gradle o quieres comparar notas sobre
-            arquitectura Android, escríbeme. Suelo contestar dentro de 48 hrs.
-          </p>
           <a href="mailto:paul.ayala023@gmail.com" className={styles.mail}>
             paul.ayala023@gmail.com
           </a>

@@ -42,6 +42,20 @@
   text-decoration-color: var(--ink);
 }
 
+.arr {
+  display: inline-block;
+  transition: transform .2s ease;
+}
+
+.repo:hover .arr {
+  transform: translate(2px, -2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arr { transition: none; }
+  .repo:hover .arr { transform: none; }
+}
+
 .desc {
   color: var(--ink-2);
   max-width: 62ch;

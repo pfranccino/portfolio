@@ -100,7 +100,7 @@
             },
             {
               "type": "dim",
-              "text": "📁 Scanning modules in: .../tests/fixtures/leaf_coupling"
+              "text": "..."
             },
             {
               "type": "ok",
@@ -108,27 +108,27 @@
             },
             {
               "type": "dim",
-              "text": "🔍 Analyzing dependencies (engine: static)..."
-            },
-            {
-              "type": "ok",
-              "text": "  ✓ app: 3 dependency(ies)"
-            },
-            {
-              "type": "ok",
-              "text": "  ✓ payments: 5 dependency(ies)"
-            },
-            {
-              "type": "dim",
-              "text": "  ..."
+              "text": "..."
             },
             {
               "type": "ok",
               "text": "✓ Analysis complete: 15 dependencies detected"
             },
             {
+              "type": "dim",
+              "text": "📊 Generating files..."
+            },
+            {
+              "type": "key",
+              "text": "✓ PlantUML: diagrams/gradle-dependencies.puml"
+            },
+            {
               "type": "key",
               "text": "✓ Mermaid:  diagrams/gradle-dependencies.mmd"
+            },
+            {
+              "type": "key",
+              "text": "✓ Report:   diagrams/gradle-report.txt"
             }
           ]
         }

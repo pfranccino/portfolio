@@ -23,9 +23,9 @@ const Skills = () => {
                   href={skill.link}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label={`Repositorio ${skill.repo} en GitHub (se abre en otra pestaña)`}
+                  aria-label={`github.com/pfranccino/${skill.repo} (se abre en otra pestaña)`}
                 >
-                  github.com/pfranccino/{skill.repo} <span aria-hidden="true">↗</span>
+                  github.com/pfranccino/{skill.repo} <span className={styles.arr} aria-hidden="true">↗</span>
                 </a>
                 <p className={styles.desc}>{skill.description}</p>
                 <p className={styles.trigger}>{skill.trigger}</p>

@@ -101,6 +101,22 @@ a {
   text-decoration: none;
 }
 
+/* Set once here so every control, including future ones, shows it can be clicked */
+a[href],
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* Every control presses 1px, so a tap registers even where there is no hover */
+a[href]:active,
+button:active {
+  transform: translateY(1px);
+}
+
 :focus-visible {
   outline: 2px solid var(--focus);
   outline-offset: 3px;
@@ -164,7 +180,6 @@ a {
   align-items: center;
   gap: .6rem;
   border: 1px solid transparent;
-  cursor: pointer;
   transition: background .2s ease, color .2s ease, transform .15s ease;
 }
 
@@ -176,10 +191,6 @@ a {
 .btn.primary:hover {
   background: var(--accent);
   color: var(--on-accent);
-}
-
-.btn:active {
-  transform: translateY(1px);
 }
 
 .chip {
@@ -207,7 +218,6 @@ a {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .btn { transition: none; }
-  .btn:active { transform: none; }
   .sec {
     opacity: 1;
     transform: none;
