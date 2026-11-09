@@ -96,9 +96,9 @@ const Articulos = () => {
             href={profile.social.medium}
             target="_blank"
             rel="noreferrer"
-            aria-label="Mi perfil en Medium (se abre en otra pestaña)"
+            aria-label="Seguirme en Medium (se abre en otra pestaña)"
           >
-            Seguirme en Medium <span aria-hidden="true">↗</span>
+            Seguirme en Medium <span className={styles.arr} aria-hidden="true">↗</span>
           </a>
         </p>
       </div>

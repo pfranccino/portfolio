@@ -7,23 +7,24 @@
     "email": "mailto:paul.ayala023@gmail.com",
     "spotify": "https://open.spotify.com/playlist/3OLbJ8Ws43vtOeSxXN7BtJ?si=myoF7zIQQUezmQjEWkluJA",
     "medium": "https://pfranccino.medium.com/",
+    "instagram": "https://www.instagram.com/pfranccinodev/",
     "linkedin": "https://www.linkedin.com/in/paul-franccino-ayala/"
   },
   "hobbies": [
     {
       "name": "Fanático de Lego",
-      "title": "Precisión por placer.",
-      "desc": "Armar sets complejos de Lego es mi forma de meditación. La estructura y el ritmo de construir paso a paso son los mismos que en el código."
+      "title": "Sets complejos, pieza por pieza.",
+      "desc": "Armarlos me desconecta: construir paso a paso, con calma."
     },
     {
       "name": "Fanático parrillero",
-      "title": "El fuego no se apura.",
-      "desc": "Asados largos para amigos y familia. Lo que más importa es esperar el momento justo del fuego, igual que en producción."
+      "title": "Asados largos para amigos y familia.",
+      "desc": "Lo que más importa es esperar el momento justo del fuego."
     },
     {
       "name": "Melómano",
-      "title": "Programo con música.",
-      "desc": "Siempre con audífonos. Esta es la playlist Mood que armé en Spotify para programar."
+      "title": "Siempre con audífonos.",
+      "desc": "Programo con música. Esta es la playlist Mood que armé en Spotify para eso."
     }
   ],
   "experience": [
@@ -39,28 +40,28 @@
       "role": "Desarrollador Android",
       "period": "2021 · 08 a 2026 · 08",
       "current": false,
-      "description": "Entré como Junior. Desarrollo y mantenimiento de aplicación financiera Android con base de usuarios masiva. Migración de Onboarding y Recuperación de Cuenta. Implementación de arquitectura modular y patrones MVVM / MVI."
+      "description": "Entré como Junior y trabajé en la app financiera, de uso masivo: en la migración de Onboarding y Recuperación de Cuenta, y en la implementación de la arquitectura modular con MVVM y MVI."
     },
     {
       "company": "Trust Technologies",
       "role": "Desarrollador Android",
       "period": "2020 · 05 a 2021 · 07",
       "current": false,
-      "description": "Desarrollo de SDKs de notificaciones y autenticación. Implementación de CI/CD con GitLab y Fastlane."
+      "description": "Armé SDKs de notificaciones y autenticación, y trabajé en el CI/CD con GitLab y Fastlane."
     },
     {
       "company": "Jumpitt Labs",
       "role": "Desarrollador Android",
       "period": "2019 · 05 a 2020 · 04",
       "current": false,
-      "description": "Biblioteca de testing de hardware y pruebas automatizadas para componentes críticos."
+      "description": "Armé una biblioteca para probar hardware, con pruebas automatizadas para componentes críticos."
     },
     {
       "company": "Zoo Company",
       "role": "Practicante Desarrollador",
       "period": "2018 · 12 a 2019 · 03",
       "current": false,
-      "description": "Desarrollo de APIs RESTful con Node.js y panel web con Angular."
+      "description": "Trabajé en APIs REST con Node.js y en un panel web con Angular."
     }
   ]
 }

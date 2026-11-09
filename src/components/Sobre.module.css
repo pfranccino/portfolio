@@ -102,6 +102,20 @@
   text-decoration-color: var(--ink);
 }
 
+.arr {
+  display: inline-block;
+  transition: transform .2s ease;
+}
+
+.hobbyLink:hover .arr {
+  transform: translate(2px, -2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arr { transition: none; }
+  .hobbyLink:hover .arr { transform: none; }
+}
+
 @media (max-width: 880px) {
   .grid { grid-template-columns: 1fr; gap: 3rem; }
   .stats {

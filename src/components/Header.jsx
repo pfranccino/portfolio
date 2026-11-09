@@ -11,7 +11,8 @@ const NAV_LINKS = [
   { href: '#articulos', label: 'Artículos' },
 ];
 
-const SECTION_IDS = NAV_LINKS.map(l => l.href.slice(1));
+// Hero and Contacto are watched too, so no nav item stays marked while one of them is in view
+const SECTION_IDS = ['hero', ...NAV_LINKS.map(l => l.href.slice(1)), 'contacto'];
 
 const currentTheme = () => {
   const forced = document.documentElement.dataset.theme;
@@ -57,9 +58,23 @@ const Header = () => {
     return () => window.removeEventListener('resize', onResize);
   }, []);
 
+  // With no saved choice the page follows the OS, so the button label has to follow it too
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-color-scheme: dark)');
+    const onChange = () => {
+      if (!document.documentElement.dataset.theme) setTheme(mq.matches ? 'dark' : 'light');
+    };
+    mq.addEventListener('change', onChange);
+    return () => mq.removeEventListener('change', onChange);
+  }, []);
+
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
     if (!menuOpen) return () => { document.body.style.overflow = ''; };
+
+    // The drawer covers the page, so what sits behind it leaves the tab order until it closes
+    const behind = document.querySelectorAll('main, footer');
+    behind.forEach((el) => { el.inert = true; });
 
     firstLinkRef.current?.focus();
     const onKey = (e) => {
@@ -70,6 +85,7 @@ const Header = () => {
     window.addEventListener('keydown', onKey);
     return () => {
       window.removeEventListener('keydown', onKey);
+      behind.forEach((el) => { el.inert = false; });
       document.body.style.overflow = '';
     };
   }, [menuOpen]);
@@ -133,7 +149,11 @@ const Header = () => {
             <ul>
               {NAV_LINKS.map(({ href, label }) => (
                 <li key={href}>
-                  <a href={href} className={activeId === href.slice(1) ? styles.active : ''}>
+                  <a
+                    href={href}
+                    data-label={label}
+                    aria-current={activeId === href.slice(1) ? 'location' : undefined}
+                  >
                     {label}
                   </a>
                 </li>

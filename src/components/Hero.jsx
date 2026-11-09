@@ -1,3 +1,4 @@
+import profile from '../data/profile.json';
 import styles from './Hero.module.css';
 
 // Each word is a brick that drops into place; the order sets the stagger
@@ -30,8 +31,9 @@ const Hero = () => {
           </h1>
 
           <p className={styles.lede}>
-            Hoy en MACH, en una app financiera de uso masivo. Publico herramientas
-            open-source para entender y mantener proyectos Gradle grandes.
+            Trabajo en MACH, en una app financiera de uso masivo. Me gusta aportar a la
+            comunidad: publico herramientas open-source y skills para Claude Code, y
+            escribo en Medium lo que voy aprendiendo.
           </p>
 
           <div className={styles.ctas}>
@@ -40,6 +42,15 @@ const Hero = () => {
             </a>
             <a href="#trabajo" className={styles.secondary}>
               Ver las herramientas
+            </a>
+            <a
+              href={profile.social.github}
+              className={styles.secondary}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Ver mi GitHub (se abre en otra pestaña)"
+            >
+              Ver mi GitHub <span className={styles.arr} aria-hidden="true">↗</span>
             </a>
           </div>
         </div>

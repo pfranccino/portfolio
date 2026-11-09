@@ -58,7 +58,8 @@
 
 .featured:hover .arr,
 .part:hover .arr,
-.olderItem:hover .arr {
+.olderItem:hover .arr,
+.moreLine a:hover .arr {
   transform: translate(2px, -2px);
 }
 
@@ -192,7 +193,8 @@
   .arr { transition: none; }
   .featured:hover .arr,
   .part:hover .arr,
-  .olderItem:hover .arr { transform: none; }
+  .olderItem:hover .arr,
+  .moreLine a:hover .arr { transform: none; }
 }
 
 @media (max-width: 880px) {

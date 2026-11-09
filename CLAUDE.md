@@ -17,7 +17,7 @@ node scripts/optimize-images.js # regenerate public/img/*.webp from src/assets/p
 
 ## Design direction
 
-Design Read: personal portfolio for Android hiring managers and engineering leads evaluating a Staff engineer. Swiss/technical editorial, cool graphite on paper with one signal-yellow accent. Dials **VARIANCE 6 / MOTION 2 / DENSITY 4**. Rebranded 2026-10-11 when Paul moved to Staff; the green/ember design before it is retired.
+Design Read: personal portfolio for Android hiring managers and engineering leads evaluating a Staff engineer. Swiss/technical editorial, cool graphite on paper with one signal-yellow accent. Dials **VARIANCE 6 / MOTION 2 / DENSITY 4** (taste scale, 1 to 10); antislop dials **ENERGY 2 / RHYTHM 3 / MOTION 2** (antislop scale, 1 to 3). Rebranded 2026-10-11 when Paul moved to Staff; the green/ember design before it is retired.
 
 The identity comes from the copy: first-person, Chilean Spanish, specific ("desde el barro", el asado, Lego). The visuals support that voice instead of competing with it. Every decision below has a one-line reason; keep the reason when you change the decision.
 
@@ -45,7 +45,7 @@ Where yellow goes: the block behind "Staff" in the H1, the header/favicon "P" bl
 
 **Logo**: the yellow block with a P drawn as an SVG path (`Header.jsx`, favicon in `index.html`), never a font glyph, so the header and the tab show the same mark.
 
-**Motion** (MOTION 2): the H1 plays once on load (the three words drop like Lego bricks, then the yellow block snaps in behind "Staff"; purpose: put the eye on the news), the header logo lands once on load with the same brick language ("Encaja": falls, squashes, settles), one scroll-entrance fade per section, hover underline color changes, 1px press on buttons, small arrow nudge on external links. No infinite animations, no pulsing, no marquee, no scroll listeners (the header uses an IntersectionObserver sentinel). Everything respects `prefers-reduced-motion`.
+**Motion** (MOTION 2): the H1 plays once on load (the three words drop like Lego bricks, then the yellow block snaps in behind "Staff"; purpose: put the eye on the news), the header logo lands once on load with the same brick language ("Encaja": falls, squashes, settles), one scroll-entrance fade per section, hover underline changes, 1px press on every link and button (set once in `index.css`), small arrow nudge on external links. Hover never relies on color alone: the underline moves, the arrow nudges, or an underline appears. No infinite animations, no pulsing, no marquee, no scroll listeners (the header uses an IntersectionObserver sentinel). Everything respects `prefers-reduced-motion`.
 
 **Theme**: follows the OS by default; the header button ("Modo oscuro" / "Modo claro") overrides it, stored in `localStorage.theme`, applied before paint by the inline script in `index.html`. Contacto stays yellow in both themes on purpose.
 
@@ -61,6 +61,8 @@ Where yellow goes: the block behind "Staff" in the H1, the header/favicon "P" bl
 - Only link repos that are public. Check with `curl -o /dev/null -w "%{http_code}" https://github.com/pfranccino/<repo>` before adding one.
 - Every published Medium article is on the site (6 today). Dates in `writings.json` and JSON-LD `datePublished` come from https://medium.com/feed/@pfranccino. Series posts carry `series` and `part`; the newest non-series post is featured.
 - `gustoso` and `habit-tracker-backend` are private: never link them.
+- Social channels: LinkedIn, GitHub, Medium, Instagram (@pfranccinodev) and Spotify. No Twitter/X, and no `twitter:creator` tag; the other `twitter:*` tags stay because they only shape link previews. GitHub also has a hero CTA ("Ver mi GitHub").
+- Contacto makes no response-time promise.
 - All UI copy is in Spanish.
 
 ## Copy rules
@@ -76,7 +78,9 @@ Where yellow goes: the block behind "Staff" in the H1, the header/favicon "P" bl
 - Every text pair passes WCAG AA (4.5:1 normal, 3:1 large) in **both** themes. Compute it, don't eyeball it.
 - Global `:focus-visible` ring uses `--focus` (ink in light, yellow in dark); inside Contacto it is `--on-accent`. Never remove outlines.
 - Every link and button is at least 44px tall on touch layouts (use padding, not font size).
-- The mobile drawer is `inert` when closed, moves focus to its first link when opened, and closes on Escape returning focus to the burger. The burger shows a visible "Menú" / "Cerrar" label, and on phones the theme button lives inside the drawer.
+- The mobile drawer is `inert` when closed; while it is open, `main` and `footer` are `inert` so focus can't reach the page hidden behind it. It moves focus to its first link when opened, and closes on Escape returning focus to the burger.
+- Every link's accessible name starts with its visible text (WCAG 2.5.3), then adds "(se abre en otra pestaña)" when it opens another site.
+- The active nav item carries `aria-current="location"` and weight 650, because its yellow underline is only 1.45:1 in light mode. The burger shows a visible "Menú" / "Cerrar" label, and on phones the theme button lives inside the drawer.
 - Hover effects only on things that are clickable.
 - Breakpoints: 880px, 760px (mobile nav), 520px (tighter header). No horizontal scroll at 375px; long words use `overflow-wrap: anywhere`.
 

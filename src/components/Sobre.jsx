@@ -1,7 +1,7 @@
 import profile from '../data/profile.json';
 import styles from './Sobre.module.css';
 
-// Verified on 2026-10-11: Android since 2019-05, public tool repos on GitHub, posts in the Medium feed
+// Each stat has a source: Android since 2019-05, public tool repos on GitHub, posts in the Medium feed
 const STATS = [
   { value: '+7', label: 'años en Android' },
   { value: '4', label: 'herramientas open-source' },
@@ -13,7 +13,7 @@ const Sobre = () => {
     <section className="sec" id="sobre">
       <div className="wrap">
         <div className="sec-head">
-          <h2 className="sec-title">Curiosidad de crear, oficio de construir.</h2>
+          <h2 className="sec-title">Un poco de mí.</h2>
         </div>
 
         <div className={styles.grid}>
@@ -58,9 +58,9 @@ const Sobre = () => {
                     href={profile.social.spotify}
                     target="_blank"
                     rel="noreferrer"
-                    aria-label="Escuchar la playlist Mood de Paul Franccino en Spotify (se abre en otra pestaña)"
+                    aria-label="Escuchar en Spotify: playlist Mood (se abre en otra pestaña)"
                   >
-                    Escuchar en Spotify <span aria-hidden="true">↗</span>
+                    Escuchar en Spotify <span className={styles.arr} aria-hidden="true">↗</span>
                   </a>
                 )}
               </div>

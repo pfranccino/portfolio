@@ -4,7 +4,7 @@ import styles from './Trabajo.module.css';
 const Preview = ({ preview }) => (
   <figure className={styles.preview}>
     <figcaption className={styles.previewBar}>{preview.source}</figcaption>
-    <div className={styles.previewCode} aria-hidden="true">
+    <div className={styles.previewCode}>
       {preview.lines.map((line, i) => {
         if (line.type === 'blank') return <div key={i}>&nbsp;</div>;
         return (
@@ -47,7 +47,7 @@ const Trabajo = () => {
                     href={project.link}
                     target="_blank"
                     rel="noreferrer"
-                    aria-label={`Ver ${project.title} en GitHub (se abre en otra pestaña)`}
+                    aria-label={`Ver en GitHub: ${project.title} (se abre en otra pestaña)`}
                   >
                     Ver en GitHub <span className={styles.arr} aria-hidden="true">↗</span>
                   </a>

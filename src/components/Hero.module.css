@@ -71,6 +71,7 @@
 .secondary {
   display: inline-flex;
   align-items: center;
+  gap: .4rem;
   min-height: 44px;
   font-weight: 600;
   color: var(--ink);
@@ -80,8 +81,14 @@
   text-underline-offset: 6px;
 }
 
+/* The underline also moves up, so hover doesn't depend on color alone */
 .secondary:hover {
   text-decoration-color: var(--ink);
+  text-underline-offset: 3px;
+}
+
+.arr {
+  display: inline-block;
 }
 
 .portrait {
@@ -144,6 +151,14 @@
 
   .since {
     animation: rise .45s ease-out .7s both;
+  }
+
+  .arr {
+    transition: transform .2s ease;
+  }
+
+  .secondary:hover .arr {
+    transform: translate(2px, -2px);
   }
 }
 

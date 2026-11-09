@@ -21,13 +21,6 @@
   line-height: 1.02;
   letter-spacing: -.03em;
   max-width: 14ch;
-  margin-bottom: 1.75rem;
-}
-
-.lead {
-  color: var(--on-accent-2);
-  font-size: 1.1rem;
-  max-width: 50ch;
   margin-bottom: 2.25rem;
 }
 
@@ -48,10 +41,6 @@
 .mail:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
-}
-
-.mail:active {
-  transform: translateY(1px);
 }
 
 .channels {
@@ -96,7 +85,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .mail, .chExt { transition: none; }
-  .mail:active, .channel:hover .chExt { transform: none; }
+  .channel:hover .chExt { transform: none; }
 }
 
 @media (max-width: 880px) {
