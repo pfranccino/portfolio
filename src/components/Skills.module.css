@@ -3,7 +3,7 @@
   border-top: 2px solid var(--ink);
 }
 
-/* Text left, the one install command right: a skill is read first, then copied */
+/* Text left, the install commands right: a skill is read first, then copied */
 .skill {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
@@ -23,6 +23,12 @@
   letter-spacing: -.01em;
 }
 
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.5rem;
+}
+
 .repo {
   display: inline-flex;
   align-items: center;
@@ -35,6 +41,17 @@
   text-decoration-color: var(--accent);
   text-decoration-thickness: 3px;
   text-underline-offset: 5px;
+}
+
+/* The guide link is prose, not a handle, so it leaves the mono */
+.guide {
+  font-family: var(--font-b);
+  font-size: .95rem;
+}
+
+/* Keep the repo name from splitting at its hyphens */
+.nowrap {
+  white-space: nowrap;
 }
 
 .repo:hover {
@@ -92,7 +109,18 @@
   overflow-wrap: anywhere;
 }
 
-.command::before {
+.line,
+.shell {
+  display: block;
+}
+
+.line + .line,
+.shell + .shell {
+  margin-top: .35rem;
+}
+
+/* Only terminal commands get the shell prompt; slash commands are typed inside Claude Code */
+.shell::before {
   content: "$ ";
   color: var(--ink-3);
 }

@@ -57,7 +57,7 @@ Where yellow goes: the block behind "Staff" in the H1, the header/favicon "P" bl
 - Eyebrow: plain line "Disponible para conversar · Santiago, Chile" with a static green dot. The dot marks a real state, so it stays; it never pulses or glows.
 - Stats must be true on the day you deploy. Today: **+7** años en Android (since 2019-05), **4** herramientas open-source (public tool repos: toml-deps-checker, deps-changelog-diff, android-gradle-analyzer, android-module-map; the pfranccino-dev-skills plugin repo is linked but not counted), **6** artículos en Medium (count the RSS feed). Update them when reality changes; never round up.
 - Project previews show real output copied from the repo README or a real run, labeled with their source ("Salida de ejemplo del README"). Never invent commands, numbers or file names. No NDA or employer content. Keep each preview to about 9 lines so all terminals share one height; cut with a `...` line and add "(recortada)" to the label instead of editing lines.
-- Skills section: the two public Claude Code skills (`android-gradle-health` in pfranccino-dev-skills, `module-map` in android-module-map). Descriptions come from each SKILL.md, install commands verbatim from each README.
+- Skills section: the `android-feature-kit` plugin (pfranccino-dev-skills marketplace, with a link to its Spanish guide on GitHub Pages) and the `module-map` skill (android-module-map). `android-gradle-health` left pfranccino-dev-skills on 2026-11-15: don't list it. Descriptions come from the plugin README and from SKILL.md, install commands verbatim from each README. Only terminal commands get the `$ ` prompt (`"shell": true`); `/plugin` commands are typed inside Claude Code.
 - Only link repos that are public. Check with `curl -o /dev/null -w "%{http_code}" https://github.com/pfranccino/<repo>` before adding one.
 - Every published Medium article is on the site (6 today). Dates in `writings.json` and JSON-LD `datePublished` come from https://medium.com/feed/@pfranccino. Series posts carry `series` and `part`; the newest non-series post is featured.
 - `gustoso` and `habit-tracker-backend` are private: never link them.
@@ -97,7 +97,7 @@ src/
     Sobre.jsx          # bio, verified stats, hobbies
     Stack.jsx          # 4-column tech list
     Trabajo.jsx        # tools in pairs (Dependencias, Arquitectura) with real CLI output
-    Skills.jsx         # Claude Code skills with their install command
+    Skills.jsx         # Claude Code plugin and skill with their install commands
     Experience.jsx     # dated role rows
     Articulos.jsx      # featured post, MACHBANK series, older posts
     Contacto.jsx       # yellow block, email CTA, social links
@@ -107,7 +107,7 @@ src/
     projects.json      # tool groups { group, question, projects[] with preview { source, lines[] } }
     writings.json      # every published Medium article { date, series?, part? }
     stack.json         # tech stack categories
-    skills.json        # Claude Code skills { name, repo, description, trigger, install }
+    skills.json        # Claude Code skills { name, repo, link, guide?, description, trigger, install { source, shell?, commands[] } }
   assets/profile.jpg   # source photo for optimize-images
 public/
   og-preview.html      # source for og-image.jpg (light-theme tokens; loads Archivo from Google Fonts only for the render)
