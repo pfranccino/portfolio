@@ -1,14 +1,18 @@
 [
   {
-    "id": "android-gradle-health",
-    "name": "android-gradle-health",
+    "id": "android-feature-kit",
+    "name": "android-feature-kit",
     "repo": "pfranccino-dev-skills",
     "link": "https://github.com/pfranccino/pfranccino-dev-skills",
-    "description": "Corre android-gradle-analyzer sobre un proyecto Android multi-módulo, lee su salida JSON y te entrega el diagnóstico: grafo de dependencias, ciclos, violaciones de SDP, métricas Ca/Ce/I, health score y lógica compartida en el módulo equivocado.",
-    "trigger": "Se activa cuando le preguntas a Claude por dependencias de Gradle, ciclos entre módulos o la salud de la arquitectura.",
+    "guide": "https://pfranccino.github.io/pfranccino-dev-skills/",
+    "description": "Un plugin con las reglas de cada capa de un módulo de feature Android: Navigation Compose 2, presentación MVI con Compose, dominio en Kotlin puro, datos offline-first, Room 3 y DataStore. Encima de esas skills, agentes que se reparten el trabajo por capa y hooks que no los dejan escribir fuera de la suya.",
+    "trigger": "Se activa cuando le pides a Claude construir o cambiar una feature: te muestra un plan en Plan Mode y ningún agente escribe código hasta que lo apruebas. Si le preguntas por el código o por un build que falla, lo analiza sin cambiar nada.",
     "install": {
-      "source": "Instalación del README, desde un clon del repo",
-      "command": "cp -r skills/android-gradle-health ~/.claude/skills/"
+      "source": "Instalación del README, dentro de Claude Code",
+      "commands": [
+        "/plugin marketplace add pfranccino/pfranccino-dev-skills",
+        "/plugin install android-feature-kit@pfranccino-dev-skills"
+      ]
     }
   },
   {
@@ -19,8 +23,11 @@
     "description": "Corre los dos scripts de android-module-map y documenta un módulo con cinco diagramas Mermaid: capas, flujos desde los ViewModels, secuencia de un flujo, dependencias entre módulos e inyección con Hilt. Después revisa contra el código las relaciones dudosas y describe las clases que no tienen KDoc.",
     "trigger": "Se activa cuando le pides a Claude diagramar, mapear o documentar la arquitectura de un módulo Kotlin.",
     "install": {
-      "source": "Instalación del README",
-      "command": "git clone https://github.com/pfranccino/android-module-map.git .claude/skills/module-map"
+      "source": "Instalación del README, en la terminal",
+      "shell": true,
+      "commands": [
+        "git clone https://github.com/pfranccino/android-module-map.git .claude/skills/module-map"
+      ]
     }
   }
 ]
